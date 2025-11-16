@@ -1,0 +1,308 @@
+/* About Page Styles */
+
+.about-page {
+  padding-top: 70px;
+}
+
+/* About Hero */
+.about-hero {
+  background: var(--gradient-primary);
+  padding: var(--space-24) 0 var(--space-20);
+  text-align: center;
+}
+
+.about-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Mission Section */
+.mission-section {
+  background: var(--white);
+}
+
+.mission-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.mission-text {
+  max-width: 600px;
+}
+
+.mission-title {
+  font-size: var(--text-4xl);
+  color: var(--gray-900);
+  margin-bottom: var(--space-6);
+}
+
+.mission-description {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--gray-700);
+  margin-bottom: var(--space-5);
+}
+
+.mission-description:last-of-type {
+  margin-bottom: 0;
+}
+
+.mission-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.mission-stats-card {
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  width: 100%;
+  max-width: 400px;
+}
+
+.mission-stat {
+  text-align: center;
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  background: rgba(90, 194, 166, 0.05);
+}
+
+.mission-stat .stat-number {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-extrabold);
+  color: var(--primary-teal);
+  margin-bottom: var(--space-2);
+}
+
+.mission-stat .stat-label {
+  font-size: var(--text-base);
+  color: var(--gray-700);
+  font-weight: var(--font-medium);
+  margin: 0;
+}
+
+/* Values Section */
+.values-section {
+  background: var(--gray-50);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-8);
+}
+
+.value-card {
+  text-align: center;
+  padding: var(--space-8);
+}
+
+.value-icon {
+  font-size: 4rem;
+  margin-bottom: var(--space-5);
+  display: inline-block;
+}
+
+.value-title {
+  font-size: var(--text-2xl);
+  color: var(--gray-900);
+  margin-bottom: var(--space-3);
+}
+
+.value-description {
+  font-size: var(--text-base);
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Credentials Section */
+.credentials-section {
+  background: var(--white);
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+}
+
+.credential-card {
+  padding: var(--space-8);
+}
+
+.credential-title {
+  font-size: var(--text-xl);
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+  font-weight: var(--font-semibold);
+}
+
+.credential-description {
+  font-size: var(--text-base);
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* Differentiators Section */
+.differentiators-section {
+  background: var(--gray-50);
+}
+
+.differentiators-card {
+  padding: var(--space-16) var(--space-8);
+}
+
+.differentiators-title {
+  font-size: var(--text-4xl);
+  color: var(--white);
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.differentiators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-8);
+}
+
+.differentiator-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-base);
+}
+
+.differentiator-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.differentiator-number {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-extrabold);
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-4);
+}
+
+.differentiator-title {
+  font-size: var(--text-xl);
+  color: var(--white);
+  margin-bottom: var(--space-3);
+}
+
+.differentiator-description {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* About CTA Section */
+.about-cta-section {
+  background: var(--white);
+}
+
+.about-cta-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-cta-title {
+  font-size: var(--text-4xl);
+  color: var(--gray-900);
+  margin-bottom: var(--space-5);
+}
+
+.about-cta-subtitle {
+  font-size: var(--text-xl);
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-10);
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mission-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .mission-text {
+    max-width: 100%;
+  }
+
+  .differentiators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: var(--text-4xl);
+  }
+
+  .page-subtitle {
+    font-size: var(--text-lg);
+  }
+
+  .mission-title {
+    font-size: var(--text-3xl);
+  }
+
+  .mission-description {
+    font-size: var(--text-base);
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .differentiators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .differentiators-title {
+    font-size: var(--text-3xl);
+  }
+
+  .about-cta-title {
+    font-size: var(--text-3xl);
+  }
+
+  .about-cta-subtitle {
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding-top: 60px;
+  }
+
+  .mission-stats-card {
+    padding: var(--space-6);
+  }
+
+  .mission-stat .stat-number {
+    font-size: var(--text-4xl);
+  }
+}
