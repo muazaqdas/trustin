@@ -5,9 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "start": "./dev.sh",
+    "start:simple": "npm run dev",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check-node": "node -v && echo 'Node version check complete. Required: 20.x'"
+  },
+  "engines": {
+    "node": ">=20.19.0",
+    "npm": ">=10.0.0"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
