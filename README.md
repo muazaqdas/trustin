@@ -70,29 +70,62 @@ trustin/
 
 ### Prerequisites
 - **Node.js 20.19+ or 22.12+** (required by Vite 7)
+- **NVM (Node Version Manager)** - Recommended for automatic version switching
 - npm or yarn package manager
 
 ### Steps
 
-1. **Install dependencies:**
+1. **Switch to Node 20 (if using NVM):**
+   ```bash
+   nvm use
+   # Or if Node 20 isn't installed:
+   nvm install 20
+   nvm use
+   ```
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. **Run development server:**
+3. **Run development server:**
+
+   **Recommended (uses automatic NVM switching):**
+   ```bash
+   npm start
+   ```
+
+   **Alternative (requires manual NVM setup):**
    ```bash
    npm run dev
    ```
 
-3. **Build for production:**
+4. **Build for production:**
    ```bash
    npm run build
    ```
 
-4. **Preview production build:**
+5. **Preview production build:**
    ```bash
    npm run preview
    ```
+
+6. **Check Node version:**
+   ```bash
+   npm run check-node
+   ```
+
+### Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm start` | Automatically switches to Node 20 and starts dev server (recommended) |
+| `npm run dev` | Starts dev server (requires Node 20 already active) |
+| `npm run start:simple` | Alias for `npm run dev` |
+| `npm run build` | Creates production build |
+| `npm run preview` | Previews production build |
+| `npm run lint` | Runs ESLint |
+| `npm run check-node` | Displays current Node version |
 
 ## Configuration Files
 
