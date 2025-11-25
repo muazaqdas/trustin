@@ -20,19 +20,20 @@ const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const professions = [
-    'Select your profession',
-    'Physician (MD/DO)',
-    'Registered Nurse (RN)',
-    'Licensed Practical Nurse (LPN)',
-    'Nurse Practitioner (NP)',
-    'Physician Assistant (PA)',
-    'Physical Therapist (PT)',
-    'Occupational Therapist (OT)',
-    'Pharmacist',
+    'Select your level',
+    'General Practitioner (GP)',
     'Dentist',
-    'Psychologist',
-    'Social Worker',
-    'Other Healthcare Professional'
+    'Specialist - Internal Medicine',
+    'Specialist - Pediatrics',
+    'Specialist - Surgery',
+    'Specialist - Cardiology',
+    'Specialist - Radiology',
+    'Specialist - Anesthesiology',
+    'Specialist - Other',
+    'Consultant - Internal Medicine',
+    'Consultant - Surgery',
+    'Consultant - Other Specialty',
+    'Other Medical Professional'
   ];
 
   const handleChange = (e) => {
@@ -62,11 +63,11 @@ const Contact = () => {
       newErrors.phone = 'Please enter a valid phone number';
     }
 
-    if (!formData.profession || formData.profession === 'Select your profession') {
-      newErrors.profession = 'Please select your profession';
+    if (!formData.profession || formData.profession === 'Select your level') {
+      newErrors.profession = 'Please select your medical level';
     }
 
-    if (!formData.state.trim()) newErrors.state = 'Target state is required';
+    if (!formData.state.trim()) newErrors.state = 'Licensing authority is required';
 
     return newErrors;
   };
@@ -103,25 +104,25 @@ const Contact = () => {
     {
       icon: '📧',
       title: 'Email Us',
-      content: 'info@trustin.com',
-      link: 'mailto:info@trustin.com'
+      content: 'info@trustinconsultancy.com',
+      link: 'mailto:info@trustinconsultancy.com'
     },
     {
       icon: '📞',
       title: 'Call Us',
-      content: '+1 (234) 567-890',
-      link: 'tel:+1234567890'
+      content: '+971 58 8121 004',
+      link: 'tel:+971588121004'
     },
     {
       icon: '📍',
       title: 'Visit Us',
-      content: '123 Healthcare Plaza, Suite 100\nMedical District, State 12345',
+      content: 'Ajman Free Zone C1 Building\nOffice - C1 - 1F\nUnited Arab Emirates',
       link: null
     },
     {
       icon: '🕐',
       title: 'Business Hours',
-      content: 'Monday - Friday: 8AM - 6PM EST\nSaturday: 9AM - 2PM EST',
+      content: 'Sunday - Thursday: 9AM - 6PM GST\nSaturday: 10AM - 2PM GST',
       link: null
     }
   ];
@@ -132,10 +133,10 @@ const Contact = () => {
       <section className="contact-hero">
         <div className="container">
           <div className="contact-hero-content slide-up">
-            <h1 className="page-title">Get Started Today</h1>
+            <h1 className="page-title">Start Your UAE Licensing Journey</h1>
             <p className="page-subtitle">
-              Ready to simplify your licensing journey? Fill out the form below and our team
-              will contact you within 24 hours with a personalized licensing strategy.
+              Ready to begin your DHA or MOH licensing process? Fill out the form below and our consultancy team
+              will contact you within 24 hours with a personalized package recommendation and timeline.
             </p>
           </div>
         </div>
@@ -148,9 +149,9 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="contact-form-wrapper slide-in-left">
               <Card variant="default" className="contact-form-card">
-                <h2 className="form-title">Start Your Application</h2>
+                <h2 className="form-title">Start Your Consultation</h2>
                 <p className="form-description">
-                  Complete the form below for a free consultation and personalized quote.
+                  Complete the form below for a free consultation, package recommendation, and personalized timeline estimate.
                 </p>
 
                 {isSubmitted ? (
@@ -158,15 +159,15 @@ const Contact = () => {
                     <div className="success-icon">✓</div>
                     <h3 className="success-title">Thank You!</h3>
                     <p className="success-text">
-                      Your application has been received. Our team will contact you within 24 hours
-                      to discuss your licensing needs and provide a customized quote.
+                      Your consultation request has been received. Our team will contact you within 24 hours
+                      to discuss your DHA/MOH licensing needs, recommend a package, and provide a timeline estimate.
                     </p>
                     <Button
                       variant="primary"
                       size="md"
                       onClick={() => setIsSubmitted(false)}
                     >
-                      Submit Another Application
+                      Submit Another Request
                     </Button>
                   </div>
                 ) : (
@@ -216,7 +217,7 @@ const Contact = () => {
 
                     <div className="input-wrapper">
                       <label htmlFor="profession" className="input-label">
-                        Profession<span className="input-required">*</span>
+                        Medical Level & Specialization<span className="input-required">*</span>
                       </label>
                       <select
                         id="profession"
@@ -238,13 +239,13 @@ const Contact = () => {
                     </div>
 
                     <Input
-                      label="Target State for Licensing"
+                      label="Target Licensing Authority"
                       name="state"
                       value={formData.state}
                       onChange={handleChange}
                       error={errors.state}
                       required
-                      placeholder="e.g., California"
+                      placeholder="e.g., DHA (Dubai) or MOH (Other Emirates)"
                     />
 
                     <div className="input-wrapper">
@@ -257,7 +258,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         className="input"
-                        placeholder="Tell us about any specific requirements or questions you have..."
+                        placeholder="Tell us about your credentials tier, current location, timeline expectations, or any questions..."
                         rows="5"
                       />
                     </div>
@@ -277,7 +278,7 @@ const Contact = () => {
                       disabled={isSubmitting}
                       className={isSubmitting ? 'btn-loading' : ''}
                     >
-                      {isSubmitting ? 'Submitting...' : 'Get Your Free Consultation'}
+                      {isSubmitting ? 'Submitting...' : 'Request Free Consultation'}
                     </Button>
                   </form>
                 )}
@@ -314,9 +315,10 @@ const Contact = () => {
                 <ul className="guarantee-list">
                   <li>✓ 24-hour response time</li>
                   <li>✓ Free initial consultation</li>
-                  <li>✓ Transparent pricing</li>
+                  <li>✓ Transparent package pricing</li>
                   <li>✓ No hidden fees</li>
-                  <li>✓ 98% approval rate</li>
+                  <li>✓ 95% success rate</li>
+                  <li>✓ Personalized consultant support</li>
                 </ul>
               </Card>
             </div>

@@ -22,7 +22,7 @@ const FAQ = () => {
           <div className="faq-hero-content slide-up">
             <h1 className="page-title">Frequently Asked Questions</h1>
             <p className="page-subtitle">
-              Find answers to common questions about healthcare licensing and our services.
+              Find answers to common questions about UAE doctor licensing, DHA/MOH processes, and living in Dubai.
               Can't find what you're looking for? Contact us directly.
             </p>
           </div>
@@ -163,7 +163,7 @@ const FAQ = () => {
                 </Link>
               </div>
               <p className="faq-cta-note">
-                📞 Call us at +1 (234) 567-890 or email info@trustin.com
+                📞 Call us at <strong>+971 58 8121 004</strong> or email <strong>info@trustinconsultancy.com</strong>
               </p>
             </div>
           </Card>

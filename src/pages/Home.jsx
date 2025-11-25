@@ -8,85 +8,85 @@ const Home = () => {
   const benefits = [
     {
       icon: '⚡',
-      title: 'Fast Processing',
-      description: 'Get your healthcare license in as little as 30 days with our expedited process and expert guidance.'
+      title: 'Streamlined Process',
+      description: 'Complete your DHA or MOH licensing in 3-6 months with our expert guidance through every step.'
     },
     {
       icon: '🎯',
       title: 'Expert Support',
-      description: 'Our team of licensing specialists ensures your application is complete, accurate, and optimized for approval.'
+      description: 'Our specialized team ensures your DataFlow verification and Prometric exam preparation are optimized for success.'
     },
     {
       icon: '✅',
-      title: 'Guaranteed Success',
-      description: '98% approval rate. We handle the complexity so you can focus on what matters - patient care.'
+      title: 'Proven Track Record',
+      description: 'High approval rate for doctors across all specialties. We handle the complexity so you can focus on your medical career.'
     },
     {
-      icon: '🌎',
-      title: 'Multi-State Licensing',
-      description: 'Expand your career opportunities with seamless licensing across multiple jurisdictions.'
+      icon: '🌐',
+      title: 'All Emirates Coverage',
+      description: 'Assistance with DHA licensing for Dubai and MOH licensing for all other emirates across the UAE.'
     },
     {
       icon: '📋',
       title: 'Complete Documentation',
-      description: 'We manage all paperwork, verifications, and communications with licensing boards.'
+      description: 'We manage attestation, DataFlow verification, exam scheduling, and all communications with authorities.'
     },
     {
       icon: '🤝',
-      title: '24/7 Support',
-      description: 'Dedicated support team available to answer questions and provide updates throughout the process.'
+      title: 'Personalized Support',
+      description: 'Dedicated consultant available throughout your 3-6 month licensing journey with regular updates.'
     }
   ];
 
   const steps = [
     {
       number: '01',
-      title: 'Submit Application',
-      description: 'Fill out our simple online form with your basic information and professional credentials.'
+      title: 'Initial Consultation',
+      description: 'Submit your information and select your package. We assess your credentials and provide a customized timeline.'
     },
     {
       number: '02',
-      title: 'Document Verification',
-      description: 'Our team verifies your credentials and prepares your complete licensing application package.'
+      title: 'Document Preparation',
+      description: 'We guide you through attestation and DataFlow verification, ensuring all documents meet DHA/MOH requirements.'
     },
     {
       number: '03',
-      title: 'Board Submission',
-      description: 'We submit your application to the licensing board and monitor its progress closely.'
+      title: 'Exam Preparation',
+      description: 'Access comprehensive study materials and expert guidance for your Prometric examination.'
     },
     {
       number: '04',
-      title: 'Receive License',
-      description: 'Get your official healthcare license and start practicing with confidence.'
+      title: 'License Approval',
+      description: 'We handle your DHA or MOH application and monitor progress until you receive your official license.'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Mitchell',
-      role: 'Licensed Physician',
-      content: 'TrustIn made my multi-state licensing process incredibly smooth. What would have taken months took just 6 weeks!',
+      name: 'Dr. Ahmed Al-Mansouri',
+      role: 'General Practitioner - DHA Licensed',
+      content: 'TrustIn Consultancy guided me through the entire DHA licensing process. Their support with DataFlow and Prometric was invaluable!',
       rating: 5
     },
     {
-      name: 'James Rodriguez, RN',
-      role: 'Registered Nurse',
-      content: 'The team was professional, responsive, and guided me through every step. Highly recommend their services!',
+      name: 'Dr. Priya Sharma',
+      role: 'Specialist - Cardiology',
+      content: 'The team was professional and kept me updated throughout. They made the complex MOH licensing process manageable and stress-free.',
       rating: 5
     },
     {
-      name: 'Maria Chen, PT',
-      role: 'Physical Therapist',
-      content: 'As an international graduate, I was overwhelmed by the process. TrustIn handled everything perfectly.',
+      name: 'Dr. James Wilson',
+      role: 'Consultant - Internal Medicine',
+      content: 'As an international doctor, I was overwhelmed by UAE licensing requirements. TrustIn handled everything expertly from attestation to final approval.',
       rating: 5
     }
   ];
 
   const stats = [
-    { number: '5,000+', label: 'Licenses Processed' },
-    { number: '98%', label: 'Approval Rate' },
-    { number: '30 Days', label: 'Average Processing' },
-    { number: '50 States', label: 'Jurisdictions Covered' }
+    { number: '500+', label: 'Doctors Licensed' },
+    { number: '95%', label: 'Success Rate' },
+    { number: '3-6 Months', label: 'Average Timeline' },
+    { number: 'All Emirates', label: 'DHA & MOH Coverage' }
   ];
 
   return (
@@ -97,17 +97,17 @@ const Home = () => {
         <div className="container hero-container">
           <div className="hero-content slide-up">
             <h1 className="hero-title">
-              Your Healthcare Licensing,
+              UAE Doctor Licensing,
               <span className="gradient-text"> Simplified</span>
             </h1>
             <p className="hero-subtitle">
-              Professional licensing services for doctors, nurses, and allied health professionals.
-              Get licensed faster with expert guidance every step of the way.
+              Professional DHA and MOH licensing consultancy for General Practitioners, Specialists, and Consultants.
+              Get licensed in the UAE with expert guidance through every step of your journey.
             </p>
             <div className="hero-cta">
               <Link to="/contact">
                 <Button variant="primary" size="xl">
-                  Get Licensed in 30 Days
+                  Start Your Journey Today
                 </Button>
               </Link>
               <Link to="/process">
@@ -139,9 +139,9 @@ const Home = () => {
       <section className="section benefits-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Why Choose TrustIn?</h2>
+            <h2 className="section-title">Why Choose TrustIn Consultancy?</h2>
             <p className="section-subtitle">
-              We make healthcare licensing fast, easy, and stress-free
+              We make UAE doctor licensing straightforward, efficient, and stress-free
             </p>
           </div>
           <div className="benefits-grid">
@@ -162,7 +162,7 @@ const Home = () => {
           <div className="section-header text-center">
             <h2 className="section-title">How It Works</h2>
             <p className="section-subtitle">
-              Four simple steps to get your healthcare license
+              Four simple steps to get your DHA or MOH license
             </p>
           </div>
           <div className="steps-grid">
@@ -189,9 +189,9 @@ const Home = () => {
       <section className="section testimonials-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Trusted by Healthcare Professionals</h2>
+            <h2 className="section-title">Trusted by Doctors Across the UAE</h2>
             <p className="section-subtitle">
-              See what our clients say about their experience
+              See what our clients say about their licensing experience
             </p>
           </div>
           <div className="testimonials-grid">
@@ -216,15 +216,15 @@ const Home = () => {
         <div className="container">
           <Card variant="gradient" className="final-cta-card">
             <div className="final-cta-content">
-              <h2 className="final-cta-title">Ready to Get Licensed?</h2>
+              <h2 className="final-cta-title">Ready to Get Licensed in the UAE?</h2>
               <p className="final-cta-subtitle">
-                Join thousands of healthcare professionals who trusted us with their licensing needs.
-                Start your application today and get licensed in as little as 30 days.
+                Join hundreds of doctors who trusted us with their DHA and MOH licensing needs.
+                Start your consultation today and begin your journey to practice medicine in the UAE.
               </p>
               <div className="final-cta-buttons">
                 <Link to="/contact">
                   <Button variant="white" size="lg">
-                    Start Your Application
+                    Start Your Consultation
                   </Button>
                 </Link>
                 <Link to="/faq">

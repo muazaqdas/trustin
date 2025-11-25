@@ -61,13 +61,14 @@
 
 /* Ghost Button */
 .btn-ghost {
-  background: rgba(90, 194, 166, 0.1);
-  color: var(--primary-teal);
+  background: var(--primary-teal);
+  color: var(--white);
   border: none;
+  box-shadow: var(--shadow-md);
 }
 
 .btn-ghost:hover:not(.btn-disabled) {
-  background: rgba(90, 194, 166, 0.2);
+  background: var(--primary-teal);
 }
 
 /* Dark Button */

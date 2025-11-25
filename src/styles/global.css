@@ -84,6 +84,17 @@ a:hover {
   padding-right: var(--container-padding);
 }
 
+/* Main Content - Account for fixed header with contact bar */
+/* .main-content {
+  padding-top: 140px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 160px;
+  }
+} */
+
 /* Section Spacing */
 .section {
   padding: var(--space-20) 0;

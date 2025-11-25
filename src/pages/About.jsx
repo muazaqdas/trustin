@@ -9,41 +9,50 @@ const About = () => {
     {
       icon: '🎯',
       title: 'Excellence',
-      description: 'We maintain the highest standards in every application we process, ensuring accuracy and completeness.'
+      description: 'We maintain the highest standards in every DHA and MOH application, ensuring accuracy, completeness, and compliance with UAE regulations.'
     },
     {
       icon: '🤝',
       title: 'Integrity',
-      description: 'Transparent communication and honest guidance throughout your entire licensing journey.'
+      description: 'Transparent communication and honest guidance throughout your entire UAE licensing journey, from attestation to final approval.'
     },
     {
       icon: '⚡',
       title: 'Efficiency',
-      description: 'Streamlined processes and expert knowledge to get you licensed faster than traditional methods.'
+      description: 'Streamlined DataFlow verification, Prometric preparation, and expert knowledge to minimize your 3-6 month licensing timeline.'
     },
     {
       icon: '💙',
       title: 'Commitment',
-      description: 'Dedicated to your success with personalized support and ongoing assistance when you need it.'
+      description: 'Dedicated to your success with personalized consultant support and regular updates throughout your entire licensing process.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'Morsal Zamani I.',
+      designation: 'Founder',
+      bio: 'Leading TrustIn Consultancy with extensive expertise in UAE healthcare licensing, dedicated to helping doctors successfully navigate the DHA and MOH licensing process.',
+      image: null
     }
   ];
 
   const credentials = [
     {
-      title: 'Certified Licensing Specialists',
-      description: 'Our team consists of professionals with extensive experience in healthcare licensing across all 50 states.'
+      title: 'UAE Licensing Experts',
+      description: 'Our team specializes in DHA and MOH licensing for doctors, with deep knowledge of DataFlow, Prometric, and UAE healthcare regulations.'
     },
     {
-      title: 'Industry Partnerships',
-      description: 'Established relationships with state licensing boards and regulatory agencies for smoother processing.'
+      title: 'Authority Relationships',
+      description: 'Established understanding of DHA, MOH, DataFlow, and Prometric processes for smoother application processing and faster approvals.'
     },
     {
-      title: 'Proven Track Record',
-      description: 'Over 5,000 successful licensing applications with a 98% approval rate since our founding.'
+      title: 'Proven Success Rate',
+      description: 'Over 500 successful doctor licensing applications across all specialties with a 95% success rate in the UAE market.'
     },
     {
-      title: 'Continuing Education',
-      description: 'Our team stays current with all regulatory changes and licensing requirements updates.'
+      title: 'Up-to-Date Knowledge',
+      description: 'Our team stays current with all UAE regulatory changes, credential tier updates, and licensing requirement modifications.'
     }
   ];
 
@@ -53,10 +62,10 @@ const About = () => {
       <section className="about-hero">
         <div className="container">
           <div className="about-hero-content slide-up">
-            <h1 className="page-title">About TrustIn</h1>
+            <h1 className="page-title">About TrustIn Consultancy</h1>
             <p className="page-subtitle">
-              Your trusted partner in healthcare professional licensing.
-              We simplify the complex licensing process so you can focus on what matters most - patient care.
+              Your trusted partner in UAE doctor licensing.
+              We simplify the complex DHA and MOH licensing process so you can focus on what matters most - your medical career in the UAE.
             </p>
           </div>
         </div>
@@ -69,33 +78,78 @@ const About = () => {
             <div className="mission-text slide-in-left">
               <h2 className="mission-title">Our Mission</h2>
               <p className="mission-description">
-                At TrustIn, we believe that healthcare professionals should spend their time caring for patients,
-                not navigating complex bureaucracy. Our mission is to streamline the licensing process,
-                making it faster, easier, and less stressful for doctors, nurses, and allied health professionals
-                across the United States.
+                At TrustIn Consultancy, we believe that doctors should spend their time preparing for their medical practice,
+                not navigating complex UAE licensing bureaucracy. Our mission is to streamline the DHA and MOH licensing process,
+                making it faster, clearer, and less stressful for General Practitioners, Specialists, and Consultants
+                seeking to practice medicine across the United Arab Emirates.
               </p>
               <p className="mission-description">
-                Since our founding, we've helped thousands of healthcare professionals obtain their licenses
-                and advance their careers. We combine expert knowledge, proven processes, and personalized
-                service to deliver results that exceed expectations.
+                Based in Ajman Free Zone, we've helped hundreds of doctors from around the world obtain their DHA and MOH licenses
+                and build successful medical careers in the UAE. We combine expert knowledge of DataFlow verification, Prometric examination,
+                attestation requirements, and proven consultancy processes to deliver results that meet your timeline and expectations.
               </p>
             </div>
             <div className="mission-visual slide-in-right">
-              <Card variant="glass" className="mission-stats-card">
+              {/* <div className="mission-image-container">
+                <img
+                  src="/images/photos/female-doctor-looking-to-camera.png"
+                  alt="TrustIn Consultancy Professional"
+                  className="mission-image"
+                />
+              </div> */}
+              <Card variant="glass" className="mission-stats-card" 
+                // style={{backgroundImage: `url(${""})`, backgroundRepeat:"no-repeat", back}}
+              >
                 <div className="mission-stat">
-                  <h3 className="stat-number">5,000+</h3>
-                  <p className="stat-label">Licenses Processed</p>
+                  <h3 className="stat-number">500+</h3>
+                  <p className="stat-label">Doctors Licensed</p>
                 </div>
                 <div className="mission-stat">
-                  <h3 className="stat-number">98%</h3>
-                  <p className="stat-label">Approval Rate</p>
+                  <h3 className="stat-number">95%</h3>
+                  <p className="stat-label">Success Rate</p>
                 </div>
                 <div className="mission-stat">
-                  <h3 className="stat-number">50</h3>
-                  <p className="stat-label">States Covered</p>
+                  <h3 className="stat-number">All Emirates</h3>
+                  <p className="stat-label">DHA & MOH Coverage</p>
                 </div>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="section team-section">
+        <div className="container">
+          <div className="section-header text-center">
+            <h2 className="section-title">Meet Our Team</h2>
+            <p className="section-subtitle">
+              Dedicated professionals committed to your licensing success
+            </p>
+          </div>
+          <div className="team-grid">
+            {team.map((member, index) => (
+              <Card key={index} variant="glass" hover className="team-card slide-up">
+                <div className="team-image-wrapper">
+                  {member.image ? (
+                    <div className="team-image-container">
+                      <img src={member.image} alt={member.name} className="team-image" />
+                    </div>
+                  ) : (
+                    <div className="team-image-placeholder">
+                      <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                      </svg>
+                    </div>
+                  )}
+                </div>
+                <div className="team-content">
+                  <h3 className="team-name">{member.name}</h3>
+                  <p className="team-designation">{member.designation}</p>
+                  {member.bio && <p className="team-bio">{member.bio}</p>}
+                </div>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -149,34 +203,34 @@ const About = () => {
             <div className="differentiators-grid">
               <div className="differentiator-item">
                 <div className="differentiator-number">01</div>
-                <h3 className="differentiator-title">Personalized Service</h3>
+                <h3 className="differentiator-title">Personalized Consultancy</h3>
                 <p className="differentiator-description">
-                  Every client receives individual attention and a customized licensing strategy
-                  tailored to their unique situation.
+                  Every doctor receives individual attention with a dedicated consultant and a customized licensing strategy
+                  based on their credential tier, specialization, and timeline goals.
                 </p>
               </div>
               <div className="differentiator-item">
                 <div className="differentiator-number">02</div>
-                <h3 className="differentiator-title">Expert Knowledge</h3>
+                <h3 className="differentiator-title">UAE Expertise</h3>
                 <p className="differentiator-description">
-                  Our team stays current with all 50 states' requirements and regulatory changes,
-                  ensuring accurate applications.
+                  Our team specializes in DHA and MOH requirements, DataFlow processes, Prometric preparation,
+                  and all UAE regulatory changes, ensuring accurate and compliant applications.
                 </p>
               </div>
               <div className="differentiator-item">
                 <div className="differentiator-number">03</div>
-                <h3 className="differentiator-title">Proven Results</h3>
+                <h3 className="differentiator-title">Proven Success</h3>
                 <p className="differentiator-description">
-                  98% approval rate and average 30-day processing time demonstrate our
-                  effectiveness and efficiency.
+                  95% success rate and realistic 3-6 month timeline demonstrate our
+                  effectiveness in guiding doctors through the complex UAE licensing journey.
                 </p>
               </div>
               <div className="differentiator-item">
                 <div className="differentiator-number">04</div>
-                <h3 className="differentiator-title">Ongoing Support</h3>
+                <h3 className="differentiator-title">Complete Support</h3>
                 <p className="differentiator-description">
-                  We don't disappear after license issuance - we're here for renewals,
-                  additional states, and ongoing compliance.
+                  From initial consultation through license issuance and beyond - we're here for license renewals,
+                  additional emirates, and ongoing compliance support.
                 </p>
               </div>
             </div>
@@ -188,14 +242,14 @@ const About = () => {
       <section className="section about-cta-section">
         <div className="container">
           <div className="about-cta-content">
-            <h2 className="about-cta-title">Experience the TrustIn Difference</h2>
+            <h2 className="about-cta-title">Experience the TrustIn Consultancy Difference</h2>
             <p className="about-cta-subtitle">
-              Join thousands of satisfied healthcare professionals who chose TrustIn for their licensing needs.
+              Join hundreds of satisfied doctors who chose TrustIn Consultancy for their UAE DHA and MOH licensing needs.
             </p>
             <div className="about-cta-buttons">
               <Link to="/contact">
                 <Button variant="primary" size="lg">
-                  Get Started Today
+                  Start Your Consultation
                 </Button>
               </Link>
               <Link to="/process">
