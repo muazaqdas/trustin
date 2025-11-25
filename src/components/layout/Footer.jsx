@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="footer-content">
           {/* Logo and Tagline */}
           <div className="footer-column footer-brand">
-            <img src="/logo.png" alt="TrustIn Consultancy Logo" className="footer-logo" />
+            <img src="/logo-cropped.png" alt="TrustIn Consultancy Logo" className="footer-logo" />
             <p className="footer-tagline">Your search ends here.</p>
             <p className="footer-description">
               Professional doctor licensing consultancy services for GP, Specialist, and Consultant doctors seeking
