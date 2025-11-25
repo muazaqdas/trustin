@@ -2,88 +2,80 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+import PricingCard from '../components/ui/PricingCard';
 import './Process.css';
 
 const Process = () => {
-  const detailedSteps = [
+  const processSteps = [
     {
       number: 1,
-      title: 'Initial Consultation & Package Selection',
-      description: 'We start with a comprehensive consultation to assess your credentials and recommend the right package for your level.',
-      details: [
-        'Evaluate your medical degree and specialization',
-        'Determine credential tier (Tier 1, 2, or 3)',
-        'Recommend GP, Specialist, or Consultant package',
-        'Provide customized timeline (3-6 months)',
-        'Explain DHA vs MOH licensing options'
-      ],
-      duration: '1-3 days'
+      title: 'Initial Consultation & Package Selection'
     },
     {
       number: 2,
-      title: 'Document Attestation',
-      description: 'We guide you through the multi-step attestation process required for UAE licensing.',
-      details: [
-        'Provide comprehensive attestation checklist',
-        'Guide through home country attestation chain',
-        'Assist with UAE Embassy attestation',
-        'Coordinate MOFA attestation in UAE',
-        'Ensure all documents meet DHA/MOH standards'
-      ],
-      duration: '3-6 weeks'
+      title: 'Document Attestation'
     },
     {
       number: 3,
-      title: 'DataFlow Verification',
-      description: 'We manage your primary source verification application through DataFlow.',
-      details: [
-        'Complete DataFlow online application',
-        'Upload all attested documents',
-        'Coordinate with your universities and employers',
-        'Monitor verification progress',
-        'Receive DataFlow verification report'
-      ],
-      duration: '4-12 weeks (varies by tier)'
+      title: 'DataFlow Verification'
     },
     {
       number: 4,
-      title: 'Prometric Exam Preparation',
-      description: 'We provide comprehensive support for your DHA or MOH Prometric examination.',
-      details: [
-        'Access to specialty-specific study materials',
-        'Expert guidance on exam format and content',
-        'Assistance with exam registration',
-        'Test-taking strategies and tips',
-        'Support for retakes if needed'
-      ],
-      duration: '2-4 months (flexible)'
+      title: 'Prometric Exam Preparation'
     },
     {
       number: 5,
-      title: 'License Application Submission',
-      description: 'We prepare and submit your complete DHA or MOH license application.',
-      details: [
-        'Create account on DHA/MOH portal',
-        'Submit all verified documents',
-        'Upload DataFlow and Prometric results',
-        'Pay licensing fees on your behalf',
-        'Schedule assessment appointments if required'
-      ],
-      duration: '1-2 weeks'
+      title: 'License Application Submission'
     },
     {
       number: 6,
-      title: 'Final Approval & License Issuance',
-      description: 'Receive your official DHA or MOH license and begin practicing in the UAE.',
-      details: [
-        'Monitor application until approval',
-        'Coordinate medical fitness test',
-        'Assist with Emirates ID application',
-        'Receive official medical license',
-        'Provide guidance on license renewal'
-      ],
-      duration: '2-4 weeks'
+      title: 'Final Approval & License Issuance'
     }
+  ];
+
+  const pricingPackages = [
+    {
+      title: 'GP/Dentist Package',
+      price: '$2,100',
+      description: 'Perfect for General Practitioners and Dentists seeking DHA or MOH licensing in the UAE',
+      features: [
+        'Prometric exam assistance and guidance',
+        'Comprehensive study materials and resources',
+        'DataFlow application follow-up',
+        'Timeline monitoring and updates',
+        'Personalized support throughout the process',
+      ],
+      popular: false,
+      category: 'gp',
+    },
+    {
+      title: 'Specialist/Fellowship Package',
+      price: '$2,700',
+      description: 'Designed for Specialist doctors and Fellowship holders pursuing UAE healthcare licensing',
+      features: [
+        'Prometric exam assistance and guidance',
+        'Comprehensive study materials and resources',
+        'DataFlow application follow-up',
+        'Timeline monitoring and updates',
+        'Personalized support throughout the process',
+      ],
+      popular: true,
+      category: 'specialist',
+    },
+    {
+      title: 'Consultant Package',
+      price: '$3,000',
+      description: 'Premium support for Consultant-level doctors navigating UAE licensing requirements',
+      features: [
+        'Prometric exam assistance and guidance',
+        'Comprehensive study materials and resources',
+        'DataFlow application follow-up',
+        'Timeline monitoring and updates',
+        'Personalized support throughout the process',
+      ],
+      popular: false,
+      category: 'consultant',
+    },
   ];
 
   const requirements = [
@@ -148,26 +140,67 @@ const Process = () => {
       <section className="section timeline-section">
         <div className="container">
           <div className="timeline">
-            {detailedSteps.map((step, index) => (
+            {processSteps.map((step, index) => (
               <div key={step.number} className={`timeline-item slide-up stagger-${(index % 3) + 1}`}>
                 <div className="timeline-marker">
                   <div className="timeline-number">{step.number}</div>
                 </div>
                 <Card variant="default" hover className="timeline-content">
-                  <div className="timeline-header">
-                    <h3 className="timeline-title">{step.title}</h3>
-                    <span className="timeline-duration">{step.duration}</span>
-                  </div>
-                  <p className="timeline-description">{step.description}</p>
-                  <ul className="timeline-details">
-                    {step.details.map((detail, idx) => (
-                      <li key={idx}>{detail}</li>
-                    ))}
-                  </ul>
+                  <h3 className="timeline-title">{step.title}</h3>
                 </Card>
-                {index < detailedSteps.length - 1 && <div className="timeline-connector"></div>}
+                {index < processSteps.length - 1 && <div className="timeline-connector"></div>}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+            {/* Pricing Packages Section */}
+      <section className="section pricing-section" id="packages">
+        <div className="container">
+          <div className="section-header text-center">
+            <h2 className="section-title">Choose Your Package</h2>
+            <p className="section-subtitle">
+              All packages include comprehensive support throughout your DHA or MOH licensing journey
+            </p>
+          </div>
+
+          <div className="pricing-grid">
+            {pricingPackages.map((plan, index) => (
+              <PricingCard key={index} {...plan} />
+            ))}
+          </div>
+
+          <div className="pricing-included">
+            <Card variant="glass" className="included-card">
+              <h3 className="included-title">What's Included in All Packages</h3>
+              <ul className="included-list">
+                <li>
+                  <strong>Prometric Exam Support:</strong> Expert guidance and preparation assistance for your licensing examination
+                </li>
+                <li>
+                  <strong>Study Materials:</strong> Access to comprehensive resources tailored to your specialization
+                </li>
+                <li>
+                  <strong>DataFlow Assistance:</strong> Complete support with your primary source verification application
+                </li>
+                <li>
+                  <strong>Timeline Monitoring:</strong> Regular updates on your application status and next steps
+                </li>
+                <li>
+                  <strong>Personalized Support:</strong> Dedicated consultant available throughout your 3-6 month licensing journey
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          <div className="pricing-disclaimer">
+            <p className="disclaimer-text">
+              <strong>Note:</strong> Pricing is subject to change. All fees are in USD and cover consultancy services only.
+              Government fees, examination fees, and document attestation charges are not included and will be paid directly
+              by the applicant to the respective authorities. Timeline for licensing completion typically ranges from 3-6 months
+              depending on your credentials tier and document preparation.
+            </p>
           </div>
         </div>
       </section>
@@ -219,11 +252,6 @@ const Process = () => {
                 <Link to="/contact">
                   <Button variant="white" size="lg">
                     Begin Your Consultation
-                  </Button>
-                </Link>
-                <Link to="/pricing">
-                  <Button variant="ghost" size="lg">
-                    View Packages
                   </Button>
                 </Link>
               </div>
