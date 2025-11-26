@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MdGpsFixed, MdHandshake, MdBolt, MdFavorite } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import './About.css';
@@ -7,22 +8,22 @@ import './About.css';
 const About = () => {
   const values = [
     {
-      icon: '🎯',
+      icon: <MdGpsFixed />,
       title: 'Excellence',
       description: 'We maintain the highest standards in every DHA and MOH application, ensuring accuracy, completeness, and compliance with UAE regulations.'
     },
     {
-      icon: '🤝',
+      icon: <MdHandshake />,
       title: 'Integrity',
       description: 'Transparent communication and honest guidance throughout your entire UAE licensing journey, from attestation to final approval.'
     },
     {
-      icon: '⚡',
+      icon: <MdBolt />,
       title: 'Efficiency',
       description: 'Streamlined DataFlow verification, Prometric preparation, and expert knowledge to minimize your 3-6 month licensing timeline.'
     },
     {
-      icon: '💙',
+      icon: <MdFavorite />,
       title: 'Commitment',
       description: 'Dedicated to your success with personalized consultant support and regular updates throughout your entire licensing process.'
     }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MdEmail, MdPhone, MdLocationOn, MdAccessTime, MdCheck } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import Card from '../components/ui/Card';
@@ -102,25 +103,25 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: '📧',
+      icon: <MdEmail />,
       title: 'Email Us',
       content: 'info@trustinconsultancy.com',
       link: 'mailto:info@trustinconsultancy.com'
     },
     {
-      icon: '📞',
+      icon: <MdPhone />,
       title: 'Call Us',
       content: '+971 58 8121 004',
       link: 'tel:+971588121004'
     },
     {
-      icon: '📍',
+      icon: <MdLocationOn />,
       title: 'Visit Us',
       content: 'Ajman Free Zone C1 Building\nOffice - C1 - 1F\nUnited Arab Emirates',
       link: null
     },
     {
-      icon: '🕐',
+      icon: <MdAccessTime />,
       title: 'Business Hours',
       content: 'Sunday - Thursday: 9AM - 6PM GST\nSaturday: 10AM - 2PM GST',
       link: null
@@ -156,7 +157,7 @@ const Contact = () => {
 
                 {isSubmitted ? (
                   <div className="success-message">
-                    <div className="success-icon">✓</div>
+                    <div className="success-icon"><MdCheck /></div>
                     <h3 className="success-title">Thank You!</h3>
                     <p className="success-text">
                       Your consultation request has been received. Our team will contact you within 24 hours
@@ -313,12 +314,12 @@ const Contact = () => {
               <Card variant="gradient" className="contact-guarantee-card">
                 <h3 className="guarantee-title">Our Commitment to You</h3>
                 <ul className="guarantee-list">
-                  <li>✓ 24-hour response time</li>
-                  <li>✓ Free initial consultation</li>
-                  <li>✓ Transparent package pricing</li>
-                  <li>✓ No hidden fees</li>
-                  <li>✓ 95% success rate</li>
-                  <li>✓ Personalized consultant support</li>
+                  <li><MdCheck /> 24-hour response time</li>
+                  <li><MdCheck /> Free initial consultation</li>
+                  <li><MdCheck /> Transparent package pricing</li>
+                  <li><MdCheck /> No hidden fees</li>
+                  <li><MdCheck /> 95% success rate</li>
+                  <li><MdCheck /> Personalized consultant support</li>
                 </ul>
               </Card>
             </div>

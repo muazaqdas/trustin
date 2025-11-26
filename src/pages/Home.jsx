@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MdBolt, MdGpsFixed, MdCheckCircle, MdPublic, MdAssignment, MdHandshake, MdArrowForward, MdStar } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import './Home.css';
@@ -7,32 +8,32 @@ import './Home.css';
 const Home = () => {
   const benefits = [
     {
-      icon: '⚡',
+      icon: <MdBolt />,
       title: 'Streamlined Process',
       description: 'Complete your DHA or MOH licensing in 3-6 months with our expert guidance through every step.'
     },
     {
-      icon: '🎯',
+      icon: <MdGpsFixed />,
       title: 'Expert Support',
       description: 'Our specialized team ensures your DataFlow verification and Prometric exam preparation are optimized for success.'
     },
     {
-      icon: '✅',
+      icon: <MdCheckCircle />,
       title: 'Proven Track Record',
       description: 'High approval rate for doctors across all specialties. We handle the complexity so you can focus on your medical career.'
     },
     {
-      icon: '🌐',
+      icon: <MdPublic />,
       title: 'All Emirates Coverage',
       description: 'Assistance with DHA licensing for Dubai and MOH licensing for all other emirates across the UAE.'
     },
     {
-      icon: '📋',
+      icon: <MdAssignment />,
       title: 'Complete Documentation',
       description: 'We manage attestation, DataFlow verification, exam scheduling, and all communications with authorities.'
     },
     {
-      icon: '🤝',
+      icon: <MdHandshake />,
       title: 'Personalized Support',
       description: 'Dedicated consultant available throughout your 3-6 month licensing journey with regular updates.'
     }
@@ -171,7 +172,7 @@ const Home = () => {
                 <div className="step-number">{step.number}</div>
                 <h3 className="step-title">{step.title}</h3>
                 <p className="step-description">{step.description}</p>
-                {index < steps.length - 1 && <div className="step-arrow">→</div>}
+                {index < steps.length - 1 && <div className="step-arrow"><MdArrowForward /></div>}
               </div>
             ))}
           </div>
@@ -198,7 +199,9 @@ const Home = () => {
             {testimonials.map((testimonial, index) => (
               <Card key={index} variant="glass" hover className={`testimonial-card slide-up stagger-${(index % 3) + 1}`}>
                 <div className="testimonial-rating">
-                  {'⭐'.repeat(testimonial.rating)}
+                  {Array.from({ length: testimonial.rating }).map((_, i) => (
+                    <MdStar key={i} />
+                  ))}
                 </div>
                 <p className="testimonial-content">"{testimonial.content}"</p>
                 <div className="testimonial-author">

@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { MdLanguage } from 'react-icons/md';
 import Button from '../ui/Button';
 import './Header.css';
 
@@ -102,7 +103,7 @@ const Header = () => {
       {/* Fixed CTA Group - Top Right */}
       <div className="header-fixed-cta">
         <div className="language-selector-fixed">
-          <span className="language-icon">🌐</span>
+          <span className="language-icon"><MdLanguage /></span>
           <span className="language-text">EN</span>
         </div>
         <Link to="/contact">
@@ -115,6 +116,14 @@ const Header = () => {
       {/* Mobile Navigation */}
       <nav className={`nav-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
         <ul className="nav-list-mobile">
+          {/* Language Selector - Mobile Only */}
+          <li className="mobile-language">
+            <div className="language-selector-mobile">
+              <span className="language-icon"><MdLanguage /></span>
+              <span className="language-text">EN</span>
+            </div>
+          </li>
+
           {navLinks.map((link) => (
             <li key={link.path}>
               <Link

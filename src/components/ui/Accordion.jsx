@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MdRemove, MdAdd } from 'react-icons/md';
 import './Accordion.css';
 
 const Accordion = ({ items }) => {
@@ -19,7 +20,7 @@ const Accordion = ({ items }) => {
           >
             <span className="accordion-title">{item.question}</span>
             <span className="accordion-icon">
-              {openIndex === index ? '−' : '+'}
+              {openIndex === index ? <MdRemove /> : <MdAdd />}
             </span>
           </button>
           <div

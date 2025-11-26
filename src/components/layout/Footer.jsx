@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import './Footer.css';
 
 const Footer = () => {
@@ -46,19 +47,19 @@ const Footer = () => {
             <h4 className="footer-heading">Contact Us</h4>
             <ul className="footer-contact">
               <li>
-                <span className="contact-icon">📧</span>
+                <span className="contact-icon"><MdEmail /></span>
                 <a href="mailto:info@trustinconsultancy.com" className="footer-link">
                   info@trustinconsultancy.com
                 </a>
               </li>
               <li>
-                <span className="contact-icon">📞</span>
+                <span className="contact-icon"><MdPhone /></span>
                 <a href="tel:+971588121004" className="footer-link">
                   +971 58 8121 004
                 </a>
               </li>
               <li>
-                <span className="contact-icon">📍</span>
+                <span className="contact-icon"><MdLocationOn /></span>
                 <span className="footer-text">
                   Ajman Free Zone C1 Building<br />
                   Office - C1 - 1F<br />

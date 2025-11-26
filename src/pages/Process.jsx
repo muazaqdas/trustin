@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MdCheck } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import PricingCard from '../components/ui/PricingCard';
@@ -221,7 +222,7 @@ const Process = () => {
                 <ul className="requirement-list">
                   {req.items.map((item, idx) => (
                     <li key={idx}>
-                      <span className="checkmark">✓</span>
+                      <span className="checkmark"><MdCheck /></span>
                       {item}
                     </li>
                   ))}

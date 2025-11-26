@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import {
+  MdSearch,
+  MdClose,
+  MdHelpOutline,
+  MdAssignment,
+  MdDescription,
+  MdSchedule,
+  MdAttachMoney,
+  MdPublic,
+  MdAutorenew,
+  MdPhone
+} from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Accordion from '../components/ui/Accordion';
 import Card from '../components/ui/Card';
@@ -33,7 +45,7 @@ const FAQ = () => {
       <section className="section faq-search-section">
         <div className="container">
           <div className="faq-search-wrapper slide-up">
-            <div className="search-icon">🔍</div>
+            <div className="search-icon"><MdSearch /></div>
             <input
               type="text"
               className="faq-search-input"
@@ -47,7 +59,7 @@ const FAQ = () => {
                 onClick={() => setSearchTerm('')}
                 aria-label="Clear search"
               >
-                ✕
+                <MdClose />
               </button>
             )}
           </div>
@@ -69,7 +81,7 @@ const FAQ = () => {
           ) : (
             <Card variant="default" className="no-results-card">
               <div className="no-results">
-                <div className="no-results-icon">❓</div>
+                <div className="no-results-icon"><MdHelpOutline /></div>
                 <h3 className="no-results-title">No Results Found</h3>
                 <p className="no-results-text">
                   We couldn't find any questions matching "{searchTerm}".
@@ -95,42 +107,42 @@ const FAQ = () => {
           </div>
           <div className="categories-grid">
             <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-1">
-              <div className="category-icon">📋</div>
+              <div className="category-icon"><MdAssignment /></div>
               <h3 className="category-title">Getting Started</h3>
               <p className="category-description">
                 Learn about the basics of healthcare licensing and what you need to begin
               </p>
             </Card>
             <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-2">
-              <div className="category-icon">📄</div>
+              <div className="category-icon"><MdDescription /></div>
               <h3 className="category-title">Documentation</h3>
               <p className="category-description">
                 Find out what documents and credentials are required for your application
               </p>
             </Card>
             <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-3">
-              <div className="category-icon">⏱️</div>
+              <div className="category-icon"><MdSchedule /></div>
               <h3 className="category-title">Timeline & Process</h3>
               <p className="category-description">
                 Understand how long the process takes and what steps are involved
               </p>
             </Card>
             <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-1">
-              <div className="category-icon">💰</div>
+              <div className="category-icon"><MdAttachMoney /></div>
               <h3 className="category-title">Costs & Fees</h3>
               <p className="category-description">
                 Learn about licensing fees, service costs, and payment options
               </p>
             </Card>
             <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-2">
-              <div className="category-icon">🌍</div>
+              <div className="category-icon"><MdPublic /></div>
               <h3 className="category-title">Multi-State Licensing</h3>
               <p className="category-description">
                 Information about getting licensed in multiple jurisdictions
               </p>
             </Card>
             <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-3">
-              <div className="category-icon">🔄</div>
+              <div className="category-icon"><MdAutorenew /></div>
               <h3 className="category-title">Renewals</h3>
               <p className="category-description">
                 Everything about license renewal, continuing education, and maintenance
@@ -163,7 +175,7 @@ const FAQ = () => {
                 </Link>
               </div>
               <p className="faq-cta-note">
-                📞 Call us at <strong>+971 58 8121 004</strong> or email <strong>info@trustinconsultancy.com</strong>
+                <MdPhone /> Call us at <strong>+971 58 8121 004</strong> or email <strong>info@trustinconsultancy.com</strong>
               </p>
             </div>
           </Card>

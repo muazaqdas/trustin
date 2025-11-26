@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { MdCheck } from 'react-icons/md';
 import Button from './Button';
 import './PricingCard.css';
 
@@ -22,7 +23,7 @@ const PricingCard = ({ title, price, description, features, popular, category })
         <ul className="features-list">
           {features.map((feature, index) => (
             <li key={index} className="feature-item">
-              <span className="feature-icon">✓</span>
+              <span className="feature-icon"><MdCheck /></span>
               <span className="feature-text">{feature}</span>
             </li>
           ))}
