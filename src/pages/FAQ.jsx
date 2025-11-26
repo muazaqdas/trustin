@@ -34,7 +34,7 @@ const FAQ = () => {
           <div className="faq-hero-content slide-up">
             <h1 className="page-title">Frequently Asked Questions</h1>
             <p className="page-subtitle">
-              Find answers to common questions about UAE doctor licensing, DHA/MOH processes, and living in Dubai.
+              Find answers to common questions about UAE doctor licensing, DHA/MOH/DOH processes, and living in Dubai.
               Can't find what you're looking for? Contact us directly.
             </p>
           </div>

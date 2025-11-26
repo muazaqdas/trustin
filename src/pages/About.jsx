@@ -10,7 +10,7 @@ const About = () => {
     {
       icon: <MdGpsFixed />,
       title: 'Excellence',
-      description: 'We maintain the highest standards in every DHA and MOH application, ensuring accuracy, completeness, and compliance with UAE regulations.'
+      description: 'We maintain the highest standards in every DHA, DOH and MOH application, ensuring accuracy, completeness, and compliance with UAE regulations.'
     },
     {
       icon: <MdHandshake />,
@@ -33,7 +33,7 @@ const About = () => {
     {
       name: 'Morsal Zamani I.',
       designation: 'Founder',
-      bio: 'Leading TrustIn Consultancy with extensive expertise in UAE healthcare licensing, dedicated to helping doctors successfully navigate the DHA and MOH licensing process.',
+      bio: 'Leading TrustIn Consultancy with extensive expertise in UAE healthcare licensing, dedicated to helping doctors successfully navigate the , DOH and MOH licensing process.',
       image: null
     }
   ];
@@ -41,11 +41,11 @@ const About = () => {
   const credentials = [
     {
       title: 'UAE Licensing Experts',
-      description: 'Our team specializes in DHA and MOH licensing for doctors, with deep knowledge of DataFlow, Prometric, and UAE healthcare regulations.'
+      description: 'Our team specializes in DHA, DOH and MOH licensing for doctors, with deep knowledge of DataFlow, Prometric, and UAE healthcare regulations.'
     },
     {
       title: 'Authority Relationships',
-      description: 'Established understanding of DHA, MOH, DataFlow, and Prometric processes for smoother application processing and faster approvals.'
+      description: 'Established understanding of DHA, DOH, MOH, DataFlow, and Prometric processes for smoother application processing and faster approvals.'
     },
     {
       title: 'Proven Success Rate',
@@ -66,7 +66,7 @@ const About = () => {
             <h1 className="page-title">About TrustIn Consultancy</h1>
             <p className="page-subtitle">
               Your trusted partner in UAE doctor licensing.
-              We simplify the complex DHA and MOH licensing process so you can focus on what matters most - your medical career in the UAE.
+              We simplify the complex DHA, DOH and MOH licensing process so you can focus on what matters most - your medical career in the UAE.
             </p>
           </div>
         </div>
@@ -80,12 +80,12 @@ const About = () => {
               <h2 className="mission-title">Our Mission</h2>
               <p className="mission-description">
                 At TrustIn Consultancy, we believe that doctors should spend their time preparing for their medical practice,
-                not navigating complex UAE licensing bureaucracy. Our mission is to streamline the DHA and MOH licensing process,
+                not navigating complex UAE licensing bureaucracy. Our mission is to streamline the DHA, DOH and MOH licensing process,
                 making it faster, clearer, and less stressful for General Practitioners, Specialists, and Consultants
                 seeking to practice medicine across the United Arab Emirates.
               </p>
               <p className="mission-description">
-                Based in Ajman Free Zone, we've helped hundreds of doctors from around the world obtain their DHA and MOH licenses
+                Based in Ajman Free Zone, we've helped hundreds of doctors from around the world obtain their , DOH and MOH licenses
                 and build successful medical careers in the UAE. We combine expert knowledge of DataFlow verification, Prometric examination,
                 attestation requirements, and proven consultancy processes to deliver results that meet your timeline and expectations.
               </p>
@@ -111,7 +111,7 @@ const About = () => {
                 </div>
                 <div className="mission-stat">
                   <h3 className="stat-number">All Emirates</h3>
-                  <p className="stat-label">DHA & MOH Coverage</p>
+                  <p className="stat-label">DHA, DOH & MOH Coverage</p>
                 </div>
               </Card>
             </div>
@@ -214,7 +214,7 @@ const About = () => {
                 <div className="differentiator-number">02</div>
                 <h3 className="differentiator-title">UAE Expertise</h3>
                 <p className="differentiator-description">
-                  Our team specializes in DHA and MOH requirements, DataFlow processes, Prometric preparation,
+                  Our team specializes in DHA, DOH and MOH requirements, DataFlow processes, Prometric preparation,
                   and all UAE regulatory changes, ensuring accurate and compliant applications.
                 </p>
               </div>
@@ -245,7 +245,7 @@ const About = () => {
           <div className="about-cta-content">
             <h2 className="about-cta-title">Experience the TrustIn Consultancy Difference</h2>
             <p className="about-cta-subtitle">
-              Join hundreds of satisfied doctors who chose TrustIn Consultancy for their UAE DHA and MOH licensing needs.
+              Join hundreds of satisfied doctors who chose TrustIn Consultancy for their UAE DHA, DOH and MOH licensing needs.
             </p>
             <div className="about-cta-buttons">
               <Link to="/contact">

@@ -10,7 +10,7 @@ const Home = () => {
     {
       icon: <MdBolt />,
       title: 'Streamlined Process',
-      description: 'Complete your DHA or MOH licensing in 3-6 months with our expert guidance through every step.'
+      description: 'Complete your DHA, MOH or DOH licensing in 3-6 months with our expert guidance through every step.'
     },
     {
       icon: <MdGpsFixed />,
@@ -25,7 +25,7 @@ const Home = () => {
     {
       icon: <MdPublic />,
       title: 'All Emirates Coverage',
-      description: 'Assistance with DHA licensing for Dubai and MOH licensing for all other emirates across the UAE.'
+      description: 'Assistance with DHA or DOH licensing for Dubai and MOH licensing for all other emirates across the UAE.'
     },
     {
       icon: <MdAssignment />,
@@ -48,7 +48,7 @@ const Home = () => {
     {
       number: '02',
       title: 'Document Preparation',
-      description: 'We guide you through attestation and DataFlow verification, ensuring all documents meet DHA/MOH requirements.'
+      description: 'We guide you through attestation and DataFlow verification, ensuring all documents meet DHA/DOH/MOH requirements.'
     },
     {
       number: '03',
@@ -58,7 +58,7 @@ const Home = () => {
     {
       number: '04',
       title: 'License Approval',
-      description: 'We handle your DHA or MOH application and monitor progress until you receive your official license.'
+      description: 'We handle your DHA, MOH or DOH application and monitor progress until you receive your official license.'
     }
   ];
 
@@ -87,7 +87,7 @@ const Home = () => {
     { number: '500+', label: 'Doctors Licensed' },
     { number: '95%', label: 'Success Rate' },
     { number: '3-6 Months', label: 'Average Timeline' },
-    { number: 'All Emirates', label: 'DHA & MOH Coverage' }
+    { number: 'All Emirates', label: 'DHA, DOH & MOH Coverage' }
   ];
 
   return (
@@ -102,7 +102,7 @@ const Home = () => {
               <span className="gradient-text"> Simplified</span>
             </h1>
             <p className="hero-subtitle">
-              Professional DHA and MOH licensing consultancy for General Practitioners, Specialists, and Consultants.
+              Professional DHA, DOH and MOH licensing consultancy for General Practitioners, Specialists, and Consultants.
               Get licensed in the UAE with expert guidance through every step of your journey.
             </p>
             <div className="hero-cta">
@@ -163,7 +163,7 @@ const Home = () => {
           <div className="section-header text-center">
             <h2 className="section-title">How It Works</h2>
             <p className="section-subtitle">
-              Four simple steps to get your DHA or MOH license
+              Four simple steps to get your DHA, MOH or DOH license
             </p>
           </div>
           <div className="steps-grid">
@@ -221,7 +221,7 @@ const Home = () => {
             <div className="final-cta-content">
               <h2 className="final-cta-title">Ready to Get Licensed in the UAE?</h2>
               <p className="final-cta-subtitle">
-                Join hundreds of doctors who trusted us with their DHA and MOH licensing needs.
+                Join hundreds of doctors who trusted us with their DHA, DOH and MOH licensing needs.
                 Start your consultation today and begin your journey to practice medicine in the UAE.
               </p>
               <div className="final-cta-buttons">

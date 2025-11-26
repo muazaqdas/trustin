@@ -136,7 +136,7 @@ const Contact = () => {
           <div className="contact-hero-content slide-up">
             <h1 className="page-title">Start Your UAE Licensing Journey</h1>
             <p className="page-subtitle">
-              Ready to begin your DHA or MOH licensing process? Fill out the form below and our consultancy team
+              Ready to begin your DHA, MOH or DOH licensing process? Fill out the form below and our consultancy team
               will contact you within 24 hours with a personalized package recommendation and timeline.
             </p>
           </div>
@@ -161,7 +161,7 @@ const Contact = () => {
                     <h3 className="success-title">Thank You!</h3>
                     <p className="success-text">
                       Your consultation request has been received. Our team will contact you within 24 hours
-                      to discuss your DHA/MOH licensing needs, recommend a package, and provide a timeline estimate.
+                      to discuss your DHA/DOH/MOH licensing needs, recommend a package, and provide a timeline estimate.
                     </p>
                     <Button
                       variant="primary"
@@ -246,7 +246,7 @@ const Contact = () => {
                       onChange={handleChange}
                       error={errors.state}
                       required
-                      placeholder="e.g., DHA (Dubai) or MOH (Other Emirates)"
+                      placeholder="e.g., DHA (Dubai), DOH or MOH (Other Emirates)"
                     />
 
                     <div className="input-wrapper">

@@ -24,7 +24,7 @@ const Footer = () => {
             <p className="footer-tagline">Your search ends here.</p>
             <p className="footer-description">
               Professional doctor licensing consultancy services for GP, Specialist, and Consultant doctors seeking
-              DHA and MOH licensing support across the United Arab Emirates.
+              DHA, DOH and MOH licensing support across the United Arab Emirates.
             </p>
           </div>
 

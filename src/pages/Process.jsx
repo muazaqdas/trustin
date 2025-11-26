@@ -38,7 +38,7 @@ const Process = () => {
     {
       title: 'GP/Dentist Package',
       price: '$2,100',
-      description: 'Perfect for General Practitioners and Dentists seeking DHA or MOH licensing in the UAE',
+      description: 'Perfect for General Practitioners and Dentists seeking DHA, MOH or DOH licensing in the UAE',
       features: [
         'Prometric exam assistance and guidance',
         'Comprehensive study materials and resources',
@@ -130,7 +130,7 @@ const Process = () => {
           <div className="process-hero-content slide-up">
             <h1 className="page-title">UAE Doctor Licensing Process</h1>
             <p className="page-subtitle">
-              A proven, step-by-step approach to obtaining your DHA or MOH license in 3-6 months.
+              A proven, step-by-step approach to obtaining your DHA, MOH or DOH license in 3-6 months.
               We handle the complexity of DataFlow, attestation, and Prometric so you can focus on your medical career.
             </p>
           </div>
@@ -162,7 +162,7 @@ const Process = () => {
           <div className="section-header text-center">
             <h2 className="section-title">Choose Your Package</h2>
             <p className="section-subtitle">
-              All packages include comprehensive support throughout your DHA or MOH licensing journey
+              All packages include comprehensive support throughout your DHA, MOH or DOH licensing journey
             </p>
           </div>
 
@@ -212,7 +212,7 @@ const Process = () => {
           <div className="section-header text-center">
             <h2 className="section-title">What You'll Need</h2>
             <p className="section-subtitle">
-              Essential documents required for DHA and MOH licensing in the UAE
+              Essential documents required for DHA, DOH and MOH licensing in the UAE
             </p>
           </div>
           <div className="requirements-grid">
@@ -232,7 +232,7 @@ const Process = () => {
           </div>
           <div className="requirements-note">
             <p>
-              <strong>Note:</strong> Specific requirements vary by specialization, credential tier, and DHA vs MOH licensing.
+              <strong>Note:</strong> Specific requirements vary by specialization, credential tier, and DHA vs DOH vs MOH licensing.
               TrustIn Consultancy provides a personalized checklist and attestation guidance based on your unique credentials.
             </p>
           </div>
@@ -246,7 +246,7 @@ const Process = () => {
             <div className="process-cta-content">
               <h2 className="process-cta-title">Ready to Start Your UAE Licensing Journey?</h2>
               <p className="process-cta-subtitle">
-                Let our experts guide you through DataFlow, Prometric, and DHA/MOH applications while you prepare for your medical career in the UAE.
+                Let our experts guide you through DataFlow, Prometric, and DHA/DOH/MOH applications while you prepare for your medical career in the UAE.
                 Get started today with a consultation and package selection.
               </p>
               <div className="process-cta-buttons">
