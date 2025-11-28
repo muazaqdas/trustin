@@ -7,13 +7,14 @@
 /* FAQ Hero */
 .faq-hero {
   position: relative;
-  background-image: url('/images/photos/dubai-skyline-blue-sky.jpg');
+  background-image: url('/images/photos/hospital-bed.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: var(--space-24) 0 var(--space-20);
   text-align: center;
   overflow: hidden;
+  min-height: 80vh;
 }
 
 .faq-hero::before {
@@ -23,7 +24,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(45, 139, 115, 0.85) 0%, rgba(30, 90, 125, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(45, 139, 115, 0.25) 0%, rgba(30, 90, 125, 0.25) 100%);
   z-index: 0;
 }
 

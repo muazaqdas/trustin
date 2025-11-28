@@ -7,7 +7,7 @@
 /* Process Hero */
 .process-hero {
   position: relative;
-  background-image: url('/images/photos/dubai-skyline-blue-sky.jpg');
+  background-image: url('/images/photos/dubai-coast-line-2.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -93,7 +93,7 @@
   line-height: 1.8;
   margin-bottom: var(--space-5);
   padding-left: var(--space-4);
-  border-left: 3px solid var(--primary-teal);
+  border-left: 3px solid var(--gray-400);
 }
 
 .hero-introduction p:first-child {
@@ -270,7 +270,7 @@
 
 .requirements-note {
   max-width: 700px;
-  margin: 0 auto;
+  margin: var(--space-6)  auto;
   text-align: center;
   background: rgba(90, 194, 166, 0.1);
   padding: var(--space-6);

@@ -126,7 +126,7 @@ const Process = () => {
                 <li key={index} className="requirement-item">
                   <div className="requirement-number">{item.number}</div>
                   <div className="requirement-content">
-                    <h3 className="requirement-label">{item.label}</h3>
+                    <strong className="requirement-label">{item.label}</strong>
                     <p className="requirement-description">
                       {item.description.split('\n').map((line, idx) => (
                         <span key={idx}>
