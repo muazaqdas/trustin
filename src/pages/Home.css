@@ -35,7 +35,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(45, 139, 115, 0.85) 0%, rgba(30, 90, 125, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(45, 139, 115, 0.25) 0%, rgba(30, 90, 125, 0.25) 100%);
   z-index: 0;
 }
 
@@ -112,7 +112,7 @@
 }
 
 .stat-number {
-  font-size: var(--text-5xl);
+  font-size: var(--text-4xl);
   font-weight: var(--font-extrabold);
   color: var(--primary-teal);
   margin-bottom: var(--space-2);

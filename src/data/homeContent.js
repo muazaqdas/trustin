@@ -16,7 +16,7 @@ export const heroContent = {
 export const statsContent = [
   { number: '500+', label: 'Doctors Licensed' },
   { number: '100%', label: 'Success Rate' },
-  { number: '3-6 or more Months', label: 'Average Timeline' },
+  { number: '3-6+ Months', label: 'Average Timeline' },
   { number: 'All Emirates', label: 'DHA, DOH & MOH Coverage' }
 ];
 
