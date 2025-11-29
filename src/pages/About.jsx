@@ -33,8 +33,16 @@ const About = () => {
     {
       name: 'Morsal Zamani I.',
       designation: 'Founder',
-      bio: 'Leading TrustIn Consultancy with extensive expertise in UAE healthcare licensing, dedicated to helping doctors successfully navigate the , DOH and MOH licensing process.',
-      image: null
+      subDesignation: '',
+      bio: 'Morsal Zamani is the visionary founder of TrustIn, dedicated to helping healthcare professionals achieve their career goals in the UAE. With a deep understanding of the healthcare industry and licensing processes, she created TrustIn to provide comprehensive, personalized support for doctors, dentists, specialists, and consultants seeking to practice legally across all Emirates \nDriven by a commitment to excellence, Morsal ensures that TrustIn delivers transparent, reliable, and professional services. Her leadership, strategic vision, and hands-on approach make her a trusted guide for healthcare professionals navigating complex licensing and career pathways',
+      image: '/images/team/morsal-zamani.jpg'
+    },
+    {
+      name: 'Dr. Ather Sajjad Jafri',
+      designation: 'Co-Founder',
+      subDesignation: '(Consultant – Child and Adolescent Psychiatry)',
+      bio: 'Dr. Ather Sajjad Jafri is a Western-trained Child and Adolescent Psychiatry Sub-Specialist with extensive experience in diagnosing and treating mental health conditions in children and adolescents. His expertise spans a wide range of pediatric psychiatric disorders, including anxiety, depression, behavioral challenges, and developmental conditions. \nAs co-founder of TrustIn, Dr. Jafri brings his international training, clinical knowledge, and passion for healthcare excellence to support the organization’s vision and initiatives. His dedication to improving mental health care and guiding healthcare professionals makes him an integral part of the TrustIn team.',
+      image: '/images/team/ather-sajjad.png'
     }
   ];
 
@@ -123,7 +131,7 @@ const About = () => {
       <section className="section team-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Meet Our Team</h2>
+            <h2 className="section-title">Leadership & Medical Expertise</h2>
             <p className="section-subtitle">
               Dedicated professionals committed to your licensing success
             </p>
@@ -147,6 +155,7 @@ const About = () => {
                 <div className="team-content">
                   <h3 className="team-name">{member.name}</h3>
                   <p className="team-designation">{member.designation}</p>
+                  <p className="team-sub-designation">{member?.subDesignation}</p>
                   {member.bio && <p className="team-bio">{member.bio}</p>}
                 </div>
               </Card>
