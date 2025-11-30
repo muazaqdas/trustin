@@ -3,67 +3,23 @@ import { Link } from 'react-router-dom';
 import { MdGpsFixed, MdHandshake, MdBolt, MdFavorite } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
+import { aboutContent } from '../data/aboutContent';
 import './About.css';
 
 const About = () => {
-  const values = [
-    {
-      icon: <MdGpsFixed />,
-      title: 'Excellence',
-      description: 'We maintain the highest standards in every DHA, DOH and MOH application, ensuring accuracy, completeness, and compliance with UAE regulations.'
-    },
-    {
-      icon: <MdHandshake />,
-      title: 'Integrity',
-      description: 'Transparent communication and honest guidance throughout your entire UAE licensing journey, from attestation to final approval.'
-    },
-    {
-      icon: <MdBolt />,
-      title: 'Efficiency',
-      description: 'Streamlined DataFlow verification, Prometric preparation, and expert knowledge to minimize your 3-6 month licensing timeline.'
-    },
-    {
-      icon: <MdFavorite />,
-      title: 'Commitment',
-      description: 'Dedicated to your success with personalized consultant support and regular updates throughout your entire licensing process.'
-    }
-  ];
+  // Icon mapping for values section
+  const iconMap = {
+    MdGpsFixed: <MdGpsFixed />,
+    MdHandshake: <MdHandshake />,
+    MdBolt: <MdBolt />,
+    MdFavorite: <MdFavorite />
+  };
 
-  const team = [
-    {
-      name: 'Morsal Zamani I.',
-      designation: 'Founder',
-      subDesignation: '',
-      bio: 'Morsal Zamani is the visionary founder of TrustIn, dedicated to helping healthcare professionals achieve their career goals in the UAE. With a deep understanding of the healthcare industry and licensing processes, she created TrustIn to provide comprehensive, personalized support for doctors, dentists, specialists, and consultants seeking to practice legally across all Emirates \nDriven by a commitment to excellence, Morsal ensures that TrustIn delivers transparent, reliable, and professional services. Her leadership, strategic vision, and hands-on approach make her a trusted guide for healthcare professionals navigating complex licensing and career pathways',
-      image: '/images/team/morsal-zamani.jpg'
-    },
-    {
-      name: 'Dr. Ather Sajjad Jafri',
-      designation: 'Co-Founder',
-      subDesignation: '(Consultant – Child and Adolescent Psychiatry)',
-      bio: 'Dr. Ather Sajjad Jafri is a Western-trained Child and Adolescent Psychiatry Sub-Specialist with extensive experience in diagnosing and treating mental health conditions in children and adolescents. His expertise spans a wide range of pediatric psychiatric disorders, including anxiety, depression, behavioral challenges, and developmental conditions. \nAs co-founder of TrustIn, Dr. Jafri brings his international training, clinical knowledge, and passion for healthcare excellence to support the organization’s vision and initiatives. His dedication to improving mental health care and guiding healthcare professionals makes him an integral part of the TrustIn team.',
-      image: '/images/team/ather-sajjad.png'
-    }
-  ];
-
-  const credentials = [
-    {
-      title: 'UAE Licensing Experts',
-      description: 'Our team specializes in DHA, DOH and MOH licensing for doctors, with deep knowledge of DataFlow, Prometric, and UAE healthcare regulations.'
-    },
-    {
-      title: 'Authority Relationships',
-      description: 'Established understanding of DHA, DOH, MOH, DataFlow, and Prometric processes for smoother application processing and faster approvals.'
-    },
-    {
-      title: 'Proven Success Rate',
-      description: 'Over 500 successful doctor licensing applications across all specialties with a 95% success rate in the UAE market.'
-    },
-    {
-      title: 'Up-to-Date Knowledge',
-      description: 'Our team stays current with all UAE regulatory changes, credential tier updates, and licensing requirement modifications.'
-    }
-  ];
+  // Map value items with their icons
+  const values = aboutContent.values.items.map(item => ({
+    ...item,
+    icon: iconMap[item.iconName]
+  }));
 
   return (
     <div className="about-page">
@@ -71,10 +27,9 @@ const About = () => {
       <section className="about-hero">
         <div className="container">
           <div className="about-hero-content slide-up">
-            <h1 className="page-title">About TrustIn Consultancy</h1>
+            <h1 className="page-title">{aboutContent.hero.title}</h1>
             <p className="page-subtitle">
-              Your trusted partner in UAE doctor licensing.
-              We simplify the complex DHA, DOH and MOH licensing process so you can focus on what matters most - your medical career in the UAE.
+              {aboutContent.hero.subtitle}
             </p>
           </div>
         </div>
@@ -85,42 +40,21 @@ const About = () => {
         <div className="container">
           <div className="mission-content">
             <div className="mission-text slide-in-left">
-              <h2 className="mission-title">Our Mission</h2>
-              <p className="mission-description">
-                At TrustIn Consultancy, we believe that doctors should spend their time preparing for their medical practice,
-                not navigating complex UAE licensing bureaucracy. Our mission is to streamline the DHA, DOH and MOH licensing process,
-                making it faster, clearer, and less stressful for General Practitioners, Specialists, and Consultants
-                seeking to practice medicine across the United Arab Emirates.
-              </p>
-              <p className="mission-description">
-                Based in Ajman Free Zone, we've helped hundreds of doctors from around the world obtain their , DOH and MOH licenses
-                and build successful medical careers in the UAE. We combine expert knowledge of DataFlow verification, Prometric examination,
-                attestation requirements, and proven consultancy processes to deliver results that meet your timeline and expectations.
-              </p>
+              <h2 className="mission-title">{aboutContent.mission.title}</h2>
+              {aboutContent.mission.paragraphs.map((paragraph, index) => (
+                <p key={index} className="mission-description">
+                  {paragraph}
+                </p>
+              ))}
             </div>
             <div className="mission-visual slide-in-right">
-              {/* <div className="mission-image-container">
-                <img
-                  src="/images/photos/female-doctor-looking-to-camera.png"
-                  alt="TrustIn Consultancy Professional"
-                  className="mission-image"
-                />
-              </div> */}
-              <Card variant="glass" className="mission-stats-card" 
-                // style={{backgroundImage: `url(${""})`, backgroundRepeat:"no-repeat", back}}
-              >
-                <div className="mission-stat">
-                  <h3 className="stat-number">500+</h3>
-                  <p className="stat-label">Doctors Licensed</p>
-                </div>
-                <div className="mission-stat">
-                  <h3 className="stat-number">95%</h3>
-                  <p className="stat-label">Success Rate</p>
-                </div>
-                <div className="mission-stat">
-                  <h3 className="stat-number">All Emirates</h3>
-                  <p className="stat-label">DHA, DOH & MOH Coverage</p>
-                </div>
+              <Card variant="glass" className="mission-stats-card">
+                {aboutContent.mission.stats.map((stat, index) => (
+                  <div key={index} className="mission-stat">
+                    <h3 className="stat-number">{stat.number}</h3>
+                    <p className="stat-label">{stat.label}</p>
+                  </div>
+                ))}
               </Card>
             </div>
           </div>
@@ -131,13 +65,13 @@ const About = () => {
       <section className="section team-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Leadership & Medical Expertise</h2>
+            <h2 className="section-title">{aboutContent.team.header.title}</h2>
             <p className="section-subtitle">
-              Dedicated professionals committed to your licensing success
+              {aboutContent.team.header.subtitle}
             </p>
           </div>
           <div className="team-grid">
-            {team.map((member, index) => (
+            {aboutContent.team.members.map((member, index) => (
               <Card key={index} variant="glass" hover className="team-card slide-up">
                 <div className="team-image-wrapper">
                   {member.image ? (
@@ -155,8 +89,19 @@ const About = () => {
                 <div className="team-content">
                   <h3 className="team-name">{member.name}</h3>
                   <p className="team-designation">{member.designation}</p>
-                  <p className="team-sub-designation">{member?.subDesignation}</p>
-                  {member.bio && <p className="team-bio">{member.bio}</p>}
+                  {member.subDesignation && (
+                    <p className="team-sub-designation">{member.subDesignation}</p>
+                  )}
+                  {member.bio && (
+                    <p className="team-bio">
+                      {member.bio.split('\n\n').map((paragraph, idx) => (
+                        <span key={idx}>
+                          {paragraph}
+                          {idx < member.bio.split('\n\n').length - 1 && <><br /><br /></>}
+                        </span>
+                      ))}
+                    </p>
+                  )}
                 </div>
               </Card>
             ))}
@@ -168,9 +113,9 @@ const About = () => {
       <section className="section values-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Our Core Values</h2>
+            <h2 className="section-title">{aboutContent.values.header.title}</h2>
             <p className="section-subtitle">
-              The principles that guide everything we do
+              {aboutContent.values.header.subtitle}
             </p>
           </div>
           <div className="values-grid">
@@ -189,13 +134,13 @@ const About = () => {
       <section className="section credentials-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Why Trust Us</h2>
+            <h2 className="section-title">{aboutContent.credentials.header.title}</h2>
             <p className="section-subtitle">
-              Our credentials and commitment to excellence
+              {aboutContent.credentials.header.subtitle}
             </p>
           </div>
           <div className="credentials-grid">
-            {credentials.map((cred, index) => (
+            {aboutContent.credentials.items.map((cred, index) => (
               <Card key={index} variant="glass" hover className={`credential-card slide-up stagger-${(index % 2) + 1}`}>
                 <h3 className="credential-title">{cred.title}</h3>
                 <p className="credential-description">{cred.description}</p>
@@ -209,40 +154,15 @@ const About = () => {
       <section className="section differentiators-section">
         <div className="container">
           <Card variant="gradient" className="differentiators-card">
-            <h2 className="differentiators-title">What Sets Us Apart</h2>
+            <h2 className="differentiators-title">{aboutContent.differentiators.title}</h2>
             <div className="differentiators-grid">
-              <div className="differentiator-item">
-                <div className="differentiator-number">01</div>
-                <h3 className="differentiator-title">Personalized Consultancy</h3>
-                <p className="differentiator-description">
-                  Every doctor receives individual attention with a dedicated consultant and a customized licensing strategy
-                  based on their credential tier, specialization, and timeline goals.
-                </p>
-              </div>
-              <div className="differentiator-item">
-                <div className="differentiator-number">02</div>
-                <h3 className="differentiator-title">UAE Expertise</h3>
-                <p className="differentiator-description">
-                  Our team specializes in DHA, DOH and MOH requirements, DataFlow processes, Prometric preparation,
-                  and all UAE regulatory changes, ensuring accurate and compliant applications.
-                </p>
-              </div>
-              <div className="differentiator-item">
-                <div className="differentiator-number">03</div>
-                <h3 className="differentiator-title">Proven Success</h3>
-                <p className="differentiator-description">
-                  95% success rate and realistic 3-6 month timeline demonstrate our
-                  effectiveness in guiding doctors through the complex UAE licensing journey.
-                </p>
-              </div>
-              <div className="differentiator-item">
-                <div className="differentiator-number">04</div>
-                <h3 className="differentiator-title">Complete Support</h3>
-                <p className="differentiator-description">
-                  From initial consultation through license issuance and beyond - we're here for license renewals,
-                  additional emirates, and ongoing compliance support.
-                </p>
-              </div>
+              {aboutContent.differentiators.items.map((item, index) => (
+                <div key={index} className="differentiator-item">
+                  <div className="differentiator-number">{item.number}</div>
+                  <h3 className="differentiator-title">{item.title}</h3>
+                  <p className="differentiator-description">{item.description}</p>
+                </div>
+              ))}
             </div>
           </Card>
         </div>
@@ -252,19 +172,19 @@ const About = () => {
       <section className="section about-cta-section">
         <div className="container">
           <div className="about-cta-content">
-            <h2 className="about-cta-title">Experience the TrustIn Consultancy Difference</h2>
+            <h2 className="about-cta-title">{aboutContent.cta.title}</h2>
             <p className="about-cta-subtitle">
-              Join hundreds of satisfied doctors who chose TrustIn Consultancy for their UAE DHA, DOH and MOH licensing needs.
+              {aboutContent.cta.subtitle}
             </p>
             <div className="about-cta-buttons">
               <Link to="/contact">
                 <Button variant="primary" size="lg">
-                  Start Your Consultation
+                  {aboutContent.cta.buttons.primary}
                 </Button>
               </Link>
               <Link to="/process">
                 <Button variant="secondary" size="lg">
-                  Learn About Our Process
+                  {aboutContent.cta.buttons.secondary}
                 </Button>
               </Link>
             </div>
