@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MdBolt, MdGpsFixed, MdCheckCircle, MdPublic, MdAssignment, MdHandshake, MdArrowForward, MdStar } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-import {
-  heroContent,
-  statsContent,
-  benefitsContent,
-  howItWorksContent,
-  testimonialsContent,
-  finalCtaContent
-} from '../data/homeContent';
+import BenefitVisual from '../components/ui/BenefitVisual';
+import VisualToggle from '../components/ui/VisualToggle';
+import { useTranslation } from '../hooks/useTranslation';
 import './Home.css';
 
 const Home = () => {
+  // State for visual type toggle
+  const [visualType, setVisualType] = useState('animated');
+
+  // Get translated content
+  const { t } = useTranslation();
+  const heroContent = t.homeContent.heroContent;
+  const statsContent = t.homeContent.statsContent;
+  const benefitsContent = t.homeContent.benefitsContent;
+  const howItWorksContent = t.homeContent.howItWorksContent;
+  const testimonialsContent = t.homeContent.testimonialsContent;
+  const finalCtaContent = t.homeContent.finalCtaContent;
+
   // Icon mapping for benefits section
   const iconMap = {
     MdBolt: <MdBolt />,
@@ -84,10 +91,14 @@ const Home = () => {
               {benefitsContent.header.subtitle}
             </p>
           </div>
+
+          {/* Visual Style Toggle */}
+          <VisualToggle value={visualType} onChange={setVisualType} />
+
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (
               <Card key={index} variant="default" hover className={`benefit-card fluid-hover slide-up stagger-${(index % 3) + 1}`}>
-                <div className="benefit-icon">{benefit.icon}</div>
+                <BenefitVisual type={visualType} benefit={benefit} />
                 <h3 className="benefit-title">{benefit.title}</h3>
                 <p className="benefit-description">{benefit.description}</p>
               </Card>

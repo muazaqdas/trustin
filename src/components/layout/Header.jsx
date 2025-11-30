@@ -2,17 +2,48 @@ import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MdLanguage } from 'react-icons/md';
 import Button from '../ui/Button';
+import { useTranslation } from '../../hooks/useTranslation';
 import './Header.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
   // const [showNav, setShowNav] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
+  const { t, language, setLanguagePreference } = useTranslation();
+
+  // Language options
+  const languages = [
+    { code: 'en', label: 'English', flag: '🇬🇧' },
+    { code: 'es', label: 'Español', flag: '🇪🇸' },
+    { code: 'fr', label: 'Français', flag: '🇫🇷' }
+  ];
+
+  const currentLanguage = languages.find(lang => lang.code === language);
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
+    setIsLangDropdownOpen(false);
   }, [location]);
+
+  // Handle language selection
+  const handleLanguageSelect = (langCode) => {
+    setLanguagePreference(langCode);
+    setIsLangDropdownOpen(false);
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isLangDropdownOpen && !event.target.closest('.language-selector-fixed') && !event.target.closest('.language-selector-mobile')) {
+        setIsLangDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isLangDropdownOpen]);
 
   // const handleScroll = useCallback(() => {
   //   const currentScrollY = window.scrollY;
@@ -49,20 +80,15 @@ const Header = () => {
   //   return () => window.removeEventListener('scroll', onScroll);
   // }, [handleScroll]);
 
-  const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/process', label: 'Process' },
-    { path: '/about', label: 'About Us' },
-    { path: '/faq', label: 'FAQs' },
-    { path: '/contact', label: 'Contact Us' },
-  ];
+  // Get navigation links from translation
+  const navLinks = t.layoutContent.headerNav.navLinks;
 
   return (
     <header className="header">
       {/* Fixed Logo - Top Left */}
       <div className="header-fixed-logo">
         <Link to="/" className="logo-link">
-          <img src="/logo.png" alt="TrustIn Consultancy Logo" className="logo" />
+          <img src="/logo.png" alt={t.layoutContent.headerNav.logoAlt} className="logo" />
         </Link>
       </div>
 
@@ -89,7 +115,7 @@ const Header = () => {
           <button
             className="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
+            aria-label={t.layoutContent.footerContent.ariaLabels.mobileMenu}
           >
             <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
               <span></span>
@@ -102,13 +128,39 @@ const Header = () => {
 
       {/* Fixed CTA Group - Top Right */}
       <div className="header-fixed-cta">
-        <div className="language-selector-fixed">
-          <span className="language-icon"><MdLanguage /></span>
-          <span className="language-text">EN</span>
+        <div className="language-selector-wrapper">
+          <div
+            className="language-selector-fixed"
+            onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+            style={{ cursor: 'pointer', position: 'relative' }}
+          >
+            {/* <span className="language-icon"><MdLanguage /></span> */}
+            <span className="language-text">{currentLanguage?.flag} {currentLanguage?.code.toUpperCase()}</span>
+
+            {/* Language Dropdown */}
+            {isLangDropdownOpen && (
+              <div className="language-dropdown">
+                {languages.map((lang) => (
+                  <div
+                    key={lang.code}
+                    className={`language-option ${language === lang.code ? 'active' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleLanguageSelect(lang.code);
+                    }}
+                  >
+                    <span className="lang-flag">{lang.flag}</span>
+                    <span className="lang-label">{lang.label}</span>
+                    {language === lang.code && <span className="lang-check">✓</span>}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
         <Link to="/contact">
           <Button variant="primary" size="md">
-            Get Started
+            {t.layoutContent.headerNav.ctaButton}
           </Button>
         </Link>
       </div>
@@ -118,9 +170,36 @@ const Header = () => {
         <ul className="nav-list-mobile">
           {/* Language Selector - Mobile Only */}
           <li className="mobile-language">
-            <div className="language-selector-mobile">
-              <span className="language-icon"><MdLanguage /></span>
-              <span className="language-text">EN</span>
+            <div className="language-selector-wrapper-mobile">
+              <div
+                className="language-selector-mobile"
+                onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
+                style={{ cursor: 'pointer', position: 'relative' }}
+              >
+                <span className="language-icon"><MdLanguage /></span>
+                <span className="language-text">{currentLanguage?.flag} {currentLanguage?.label}</span>
+
+                {/* Language Dropdown - Mobile */}
+                {isLangDropdownOpen && (
+                  <div className="language-dropdown language-dropdown-mobile">
+                    {languages.map((lang) => (
+                      <div
+                        key={lang.code}
+                        className={`language-option ${language === lang.code ? 'active' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleLanguageSelect(lang.code);
+                          setIsMobileMenuOpen(false);
+                        }}
+                      >
+                        <span className="lang-flag">{lang.flag}</span>
+                        <span className="lang-label">{lang.label}</span>
+                        {language === lang.code && <span className="lang-check">✓</span>}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </li>
 
@@ -137,7 +216,7 @@ const Header = () => {
           <li className="mobile-cta">
             <Link to="/contact">
               <Button variant="primary" size="md" fullWidth>
-                Get Started
+                {t.layoutContent.headerNav.ctaButton}
               </Button>
             </Link>
           </li>

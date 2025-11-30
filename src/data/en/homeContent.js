@@ -29,32 +29,44 @@ export const benefitsContent = {
     {
       iconName: 'MdBolt',
       title: 'Streamlined Process',
-      description: 'Complete your DHA, MOH or DOH licensing in 3-6 months or more with our expert guidance through every step.'
+      description: 'Complete your DHA, MOH or DOH licensing in 3-6 months or more with our expert guidance through every step.',
+      lottieAnimation: '/animations/benefits/streamlined-process.json',
+      isometricImage: '/images/benefits/isometric/streamlined-process.svg'
     },
     {
       iconName: 'MdGpsFixed',
       title: 'Expert Support',
-      description: 'Our specialized team ensures your DataFlow verification and Prometric exam preparation are optimized for success.'
+      description: 'Our specialized team ensures your DataFlow verification and Prometric exam preparation are optimized for success.',
+      lottieAnimation: '/animations/benefits/expert-support.json',
+      isometricImage: '/images/benefits/isometric/expert-support.svg'
     },
     {
       iconName: 'MdCheckCircle',
       title: 'Proven Track Record',
-      description: 'High approval rate for doctors across all specialties. We handle the complexity so you can focus on your medical career.'
+      description: 'High approval rate for doctors across all specialties. We handle the complexity so you can focus on your medical career.',
+      lottieAnimation: '/animations/benefits/proven-track-record.json',
+      isometricImage: '/images/benefits/isometric/proven-track-record.svg'
     },
     {
       iconName: 'MdPublic',
       title: 'All Emirates Coverage',
-      description: 'Assistance with DHA or DOH licensing for Dubai and MOH licensing for all other emirates across the UAE.'
+      description: 'Assistance with DHA or DOH licensing for Dubai and MOH licensing for all other emirates across the UAE.',
+      lottieAnimation: '/animations/benefits/all-emirates.json',
+      isometricImage: '/images/benefits/isometric/all-emirates.svg'
     },
     {
       iconName: 'MdAssignment',
       title: 'Complete Documentation',
-      description: 'We manage attestation, DataFlow verification, exam scheduling, and all communications with authorities.'
+      description: 'We manage attestation, DataFlow verification, exam scheduling, and all communications with authorities.',
+      lottieAnimation: '/animations/benefits/complete-documentation.json',
+      isometricImage: '/images/benefits/isometric/complete-documentation.svg'
     },
     {
       iconName: 'MdHandshake',
       title: 'Personalized Support',
-      description: 'Dedicated consultant available throughout your process of licensing journey with regular updates.'
+      description: 'Dedicated consultant available throughout your process of licensing journey with regular updates.',
+      lottieAnimation: '/animations/benefits/personalized-support.json',
+      isometricImage: '/images/benefits/isometric/personalized-support.svg'
     }
   ]
 };

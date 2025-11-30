@@ -3,10 +3,14 @@ import { MdEmail, MdPhone, MdLocationOn, MdAccessTime, MdCheck } from 'react-ico
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import Card from '../components/ui/Card';
-import { contactContent } from '../data/contactContent';
+import { useTranslation } from '../hooks/useTranslation';
 import './Contact.css';
 
 const Contact = () => {
+  // Get translated content
+  const { t } = useTranslation();
+  const contactContent = t.contactContent.contactContent;
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

@@ -4,10 +4,13 @@ import { MdCheck } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import PricingCard from '../components/ui/PricingCard';
-import { processContent } from '../data/processContent';
+import { useTranslation } from '../hooks/useTranslation';
 import './Process.css';
 
 const Process = () => {
+  // Get translated content
+  const { t } = useTranslation();
+  const processContent = t.processContent.processContent;
 
   return (
     <div className="process-page">

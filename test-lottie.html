@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lottie Animation Test</title>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f3f4f6;
+    }
+    h1 {
+      text-align: center;
+      color: #2D8B73;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .animation-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .animation-card h3 {
+      margin-top: 10px;
+      color: #1E5A7D;
+    }
+    lottie-player {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎨 Lottie Animation Test - TrustIn Benefits</h1>
+
+  <div class="grid">
+    <div class="animation-card">
+      <lottie-player
+        src="/animations/benefits/streamlined-process.json"
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px;"
+        loop
+        autoplay>
+      </lottie-player>
+      <h3>Streamlined Process</h3>
+    </div>
+
+    <div class="animation-card">
+      <lottie-player
+        src="/animations/benefits/expert-support.json"
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px;"
+        loop
+        autoplay>
+      </lottie-player>
+      <h3>Expert Support</h3>
+    </div>
+
+    <div class="animation-card">
+      <lottie-player
+        src="/animations/benefits/proven-track-record.json"
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px;"
+        loop
+        autoplay>
+      </lottie-player>
+      <h3>Proven Track Record</h3>
+    </div>
+
+    <div class="animation-card">
+      <lottie-player
+        src="/animations/benefits/all-emirates.json"
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px;"
+        loop
+        autoplay>
+      </lottie-player>
+      <h3>All Emirates Coverage</h3>
+    </div>
+
+    <div class="animation-card">
+      <lottie-player
+        src="/animations/benefits/complete-documentation.json"
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px;"
+        loop
+        autoplay>
+      </lottie-player>
+      <h3>Complete Documentation</h3>
+    </div>
+
+    <div class="animation-card">
+      <lottie-player
+        src="/animations/benefits/personalized-support.json"
+        background="transparent"
+        speed="1"
+        style="width: 200px; height: 200px;"
+        loop
+        autoplay>
+      </lottie-player>
+      <h3>Personalized Support</h3>
+    </div>
+  </div>
+
+  <script>
+    // Test if files are loading
+    fetch('/animations/benefits/streamlined-process.json')
+      .then(response => {
+        if (response.ok) {
+          console.log('✅ Lottie files are accessible!');
+        } else {
+          console.error('❌ Lottie files not found');
+        }
+      });
+  </script>
+</body>
+</html>

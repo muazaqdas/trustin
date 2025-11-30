@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import { MdGpsFixed, MdHandshake, MdBolt, MdFavorite } from 'react-icons/md';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-import { aboutContent } from '../data/aboutContent';
+import { useTranslation } from '../hooks/useTranslation';
 import './About.css';
 
 const About = () => {
+  // Get translated content
+  const { t } = useTranslation();
+  const aboutContent = t.aboutContent.aboutContent;
+
   // Icon mapping for values section
   const iconMap = {
     MdGpsFixed: <MdGpsFixed />,

@@ -156,14 +156,10 @@
 .benefit-card {
   text-align: center;
   padding: var(--space-8);
+  transition: all var(--transition-base);
 }
 
-.benefit-icon {
-  font-size: 4rem;
-  margin-bottom: var(--space-6);
-  display: inline-block;
-  animation: float 3s ease-in-out infinite;
-}
+/* Benefit icon styles moved to BenefitVisual.css */
 
 .benefit-title {
   font-size: var(--text-2xl);

@@ -15,12 +15,16 @@ import {
 import Button from '../components/ui/Button';
 import Accordion from '../components/ui/Accordion';
 import Card from '../components/ui/Card';
-import { faqData } from '../data/faqData';
-import { faqContent } from '../data/faqContent';
+import { useTranslation } from '../hooks/useTranslation';
 import './FAQ.css';
 
 const FAQ = () => {
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Get translated content
+  const { t } = useTranslation();
+  const faqData = t.faqData.faqData;
+  const faqContent = t.faqContent.faqContent;
 
   // Icon mapping for categories
   const iconMap = {
