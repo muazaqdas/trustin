@@ -16,10 +16,26 @@ import Button from '../components/ui/Button';
 import Accordion from '../components/ui/Accordion';
 import Card from '../components/ui/Card';
 import { faqData } from '../data/faqData';
+import { faqContent } from '../data/faqContent';
 import './FAQ.css';
 
 const FAQ = () => {
   const [searchTerm, setSearchTerm] = useState('');
+
+  // Icon mapping for categories
+  const iconMap = {
+    MdAssignment: <MdAssignment />,
+    MdDescription: <MdDescription />,
+    MdSchedule: <MdSchedule />,
+    MdAttachMoney: <MdAttachMoney />,
+    MdPublic: <MdPublic />,
+    MdAutorenew: <MdAutorenew />
+  };
+
+  const categories = faqContent.categories.items.map(item => ({
+    ...item,
+    icon: iconMap[item.iconName]
+  }));
 
   const filteredFaqs = faqData.filter(faq =>
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -32,10 +48,9 @@ const FAQ = () => {
       <section className="faq-hero">
         <div className="container">
           <div className="faq-hero-content slide-up">
-            <h1 className="page-title">Frequently Asked Questions</h1>
+            <h1 className="page-title">{faqContent.hero.title}</h1>
             <p className="page-subtitle">
-              Find answers to common questions about UAE doctor licensing, DHA/MOH/DOH processes, and living in Dubai.
-              Can't find what you're looking for? Contact us directly.
+              {faqContent.hero.subtitle}
             </p>
           </div>
         </div>
@@ -49,7 +64,7 @@ const FAQ = () => {
             <input
               type="text"
               className="faq-search-input"
-              placeholder="Search for questions..."
+              placeholder={faqContent.search.placeholder}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -82,13 +97,12 @@ const FAQ = () => {
             <Card variant="default" className="no-results-card">
               <div className="no-results">
                 <div className="no-results-icon"><MdHelpOutline /></div>
-                <h3 className="no-results-title">No Results Found</h3>
+                <h3 className="no-results-title">{faqContent.noResults.title}</h3>
                 <p className="no-results-text">
-                  We couldn't find any questions matching "{searchTerm}".
-                  Try different keywords or contact us directly.
+                  {faqContent.noResults.text.replace('{searchTerm}', searchTerm)}
                 </p>
                 <Button variant="primary" size="md" onClick={() => setSearchTerm('')}>
-                  Clear Search
+                  {faqContent.noResults.buttonText}
                 </Button>
               </div>
             </Card>
@@ -100,54 +114,26 @@ const FAQ = () => {
       <section className="section faq-categories-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Browse by Topic</h2>
+            <h2 className="section-title">{faqContent.categories.header.title}</h2>
             <p className="section-subtitle">
-              Quick access to information about specific licensing topics
+              {faqContent.categories.header.subtitle}
             </p>
           </div>
           <div className="categories-grid">
-            <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-1">
-              <div className="category-icon"><MdAssignment /></div>
-              <h3 className="category-title">Getting Started</h3>
-              <p className="category-description">
-                Learn about the basics of healthcare licensing and what you need to begin
-              </p>
-            </Card>
-            <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-2">
-              <div className="category-icon"><MdDescription /></div>
-              <h3 className="category-title">Documentation</h3>
-              <p className="category-description">
-                Find out what documents and credentials are required for your application
-              </p>
-            </Card>
-            <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-3">
-              <div className="category-icon"><MdSchedule /></div>
-              <h3 className="category-title">Timeline & Process</h3>
-              <p className="category-description">
-                Understand how long the process takes and what steps are involved
-              </p>
-            </Card>
-            <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-1">
-              <div className="category-icon"><MdAttachMoney /></div>
-              <h3 className="category-title">Costs & Fees</h3>
-              <p className="category-description">
-                Learn about licensing fees, service costs, and payment options
-              </p>
-            </Card>
-            <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-2">
-              <div className="category-icon"><MdPublic /></div>
-              <h3 className="category-title">Multi-State Licensing</h3>
-              <p className="category-description">
-                Information about getting licensed in multiple jurisdictions
-              </p>
-            </Card>
-            <Card variant="glass" hover className="category-card fluid-hover slide-up stagger-3">
-              <div className="category-icon"><MdAutorenew /></div>
-              <h3 className="category-title">Renewals</h3>
-              <p className="category-description">
-                Everything about license renewal, continuing education, and maintenance
-              </p>
-            </Card>
+            {categories.map((category, index) => (
+              <Card
+                key={index}
+                variant="glass"
+                hover
+                className={`category-card fluid-hover slide-up stagger-${(index % 3) + 1}`}
+              >
+                <div className="category-icon">{category.icon}</div>
+                <h3 className="category-title">{category.title}</h3>
+                <p className="category-description">
+                  {category.description}
+                </p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -157,25 +143,27 @@ const FAQ = () => {
         <div className="container">
           <Card variant="gradient" className="faq-cta-card">
             <div className="faq-cta-content">
-              <h2 className="faq-cta-title">Still Have Questions?</h2>
+              <h2 className="faq-cta-title">{faqContent.cta.title}</h2>
               <p className="faq-cta-subtitle">
-                Our licensing specialists are here to help. Get personalized answers
-                to your specific licensing questions with a free consultation.
+                {faqContent.cta.subtitle}
               </p>
               <div className="faq-cta-buttons">
                 <Link to="/contact">
                   <Button variant="white" size="lg">
-                    Contact Us
+                    {faqContent.cta.buttons.primary}
                   </Button>
                 </Link>
                 <Link to="/process">
                   <Button variant="ghost" size="lg">
-                    View Our Process
+                    {faqContent.cta.buttons.secondary}
                   </Button>
                 </Link>
               </div>
               <p className="faq-cta-note">
-                <MdPhone /> Call us at <strong>+971 58 8121 004</strong> or email <strong>info@trustinconsultancy.com</strong>
+                <MdPhone /> {faqContent.cta.note.split('**')[0]}
+                <strong>{faqContent.cta.note.split('**')[1]}</strong>
+                {faqContent.cta.note.split('**')[2]}
+                <strong>{faqContent.cta.note.split('**')[3]}</strong>
               </p>
             </div>
           </Card>

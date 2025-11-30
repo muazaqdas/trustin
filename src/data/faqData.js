@@ -1,69 +1,113 @@
 // FAQ Data for TrustIn Consultancy - UAE Doctor Licensing
-// Updated from Content-And-Structure/faq.txt
+// Updated FAQ Questions & Answers
 
 export const faqData = [
   {
-    question: "How long will the Process Take For DHA License?",
-    answer: "Typically we can say for tier 1 qualified Doctors the licensing process takes on average 3 months, for tier 2 or 3 qualified Doctors the process can take up to 6 months or even more due to the variances of training systems and documentation requirements of different countries, translation issues and assessment booking."
+    question: "What time frame will the DHA license process take?",
+    answer: "ideally, the licensing procedure for tier 1 qualified doctors takes three months on average, while for tier 2 or 3 qualified doctors, it can take six months or more due to differences in training systems and documentation requirements between countries, translation issues, and assessment booking."
   },
   {
-    question: "Are there employee pension schemes in the UAE?",
-    answer: "No, there are no pension schemes for professional expatriates in the UAE; however, they are entitled to end-of-service gratuity. But there so many Long term Financial Planning when Relocating to the UAE."
+    question: "What is a DHA license?",
+    answer: "A DHA license is an official authorization from the Dubai Health Authority that allows healthcare professionals to practice legally in Dubai. Every doctor, specialist, consultant, and allied health professional must obtain it before working in any clinic or hospital."
   },
   {
-    question: "How long do Expat Doctors stay in Dubai?",
-    answer: "The United Arab Emirates is an extremely attractive place for foreign citizens to relocate. The emirate of Dubai is especially popular for Doctors seeking to live and work in the UAE."
+    question: "Who needs a DHA license?",
+    answer: "Anyone who wants to work in Dubai's healthcare sector, including: General practitioners, Specialists & consultants, Nurses, Dentists, Allied health professionals. If you work with patients, you need DHA approval."
   },
   {
-    question: "Where shall I live when I first arrive in Dubai / UAE?",
-    answer: "There are so many incredible options. Most doctors stay in temporary hotel or holiday apartment accommodations while their residency visa is being processed. This is a great opportunity to look around to see what is available, and you can always extend your stay if you need more time. He or she may choose to live somewhere luxurious, near the beach, or close to work, which also saves time commuting."
+    question: "What documents are required?",
+    answer: "Typically, Passport, Education certificates, Experience letters, Good standing certificate, License from your home country, Passport photo. Some specialties may require additional documents."
   },
   {
-    question: "Can I bring my pet when relocating to the UAE?",
-    answer: "Yes, you can bring your cat, dog, or other pet when relocating to the United Arab Emirates with you, but there are some process requirement for bringing a pet to the UAE."
+    question: "What if some of my documents are missing or expired?",
+    answer: "Don't worry — we help you understand what can be replaced, renewed, or substituted. Every case is different, and we guide you step-by-step."
   },
   {
-    question: "Can I bring my parents to stay in the UAE?",
-    answer: "The great news is that, if you are working in the UAE with a valid residence visa, yes you can sponsor your parents to obtain their residence visa. Please read our article to learn about how to sponsor your parents to stay in the UAE."
+    question: "Do I need a clinic to sponsor me before I get a DHA license?",
+    answer: "No. You can start your DHA process without a job offer. Many doctors complete everything first, then secure a job."
   },
   {
-    question: "Is the Dubai market saturated with Doctors?",
-    answer: "From my experience, the market is not saturated; the Dubai market is competitive! Dubai is an entrepreneurial business hub; you need to radiate confidence, be the best in your field, and just outwork others in order to adapt here long-term!"
+    question: "Can TrustIn Consultancy handle the whole process for me?",
+    answer: "Yes. We assist from A to Z: Translation, attestation, DataFlow, PSV, Credentialing, Eligibility, Prometric exam study material, Licensing, Job placement opportunities, exam scheduling (FIRST ATTEMPT), full support here in dubai, CV guidance. You simply submit the required documents — we handle the rest."
   },
   {
-    question: "How can you create a CV that will make you stand out with Dubai Hospitals?",
-    answer: "Keep it as concise as possible. Employers pay more attention to medical education than particular courses, so make sure your qualifications section is very clear on cv."
+    question: "How do I know if I am eligible for a DHA license?",
+    answer: "We offer a free eligibility assessment. Just send your CV and documents, and we evaluate your experience and qualifications according to DHA standards."
   },
   {
-    question: "Do I have to pay UK tax on my income from Dubai?",
-    answer: "The short answer is no, please read our article for more information."
+    question: "Can I apply for DHA even if I don't speak English well?",
+    answer: "Yes, but DHA exams are in English. We offer English language support and interview preparation for non-English-speaking applicants."
   },
   {
-    question: "Factors to consider when choosing a school for your child?",
-    answer: "Many excellent international schools in Dubai, with a wide choice of curricula including British, International Baccalaureate (IB), French and American, among other school systems. Currently, there are 216 private schools offering 17 different curricula in Dubai, and this number is increasing as the population grows."
+    question: "Does DHA accept doctors from South America and Europe?",
+    answer: "Yes — DHA accepts applicants from all regions. We specialize in: Colombian, Brazilian, Argentinian, Peruvian, European (EU & non-EU) medical professionals."
   },
   {
-    question: "Is accommodation or allowance included in the contract?",
-    answer: "Mostly in Dubai, the accommodation and schools allowances are not included- a few hospitals still do however most don't. I believe the reason for this is that Dubai is such a popular destination to live in as many expats are so comfortable to work here and live here long term so the hospitals do not have to offer these incentives as in other regions / countries."
+    question: "What is the difference between DHA, MOH, and HAAD?",
+    answer: "DHA — Dubai, DOH/HAAD — Abu Dhabi, MOH — Sharjah, Ajman, Fujairah, UAQ, RAK. If you want to work in Dubai, DHA is the correct license."
   },
   {
-    question: "What is included in your licensing services exactly?",
-    answer: "We charge a full amount up front, and this includes all the application fees, Dataflow verification fees as well as our full consultation service, we will monitor your application continuously and keep you updated. Our service is not just about assisting with the license, we fully support all of our candidates throughout the entire relocation process. We are also contracted with most reputable hospital groups in Dubai so we will let you know as we come across any suitable vacancies that you can apply for with our clients, OR if we do not come across a vacancy for you we will consult you on how and which hospitals to apply to directly."
+    question: "Can I convert my DHA license to another emirate later?",
+    answer: "Yes. License transfers are possible with additional approvals. We guide you through the requirements."
   },
   {
-    question: "How to be a successful Doctor in Dubai?",
-    answer: "Spend time with your hospital marketing department to find out about relevant events in Dubai to speak at and give presentations about your services. Connect with pharmaceutical companies to get involved with relevant promotional events and networking opportunities. Hand out lots of business cards so that patients have your contact details. Get yourself out there and be really proactive with networking."
+    question: "What exactly is included in your DHA licensing service?",
+    answer: "Our fee covers the entire process from start to finish — all application charges, DataFlow verification costs, and complete consultancy support. We actively manage your file, monitor progress, and update you at every step. Beyond licensing, we also guide you through relocation and connect you with reputable hospital groups for potential job opportunities. If a suitable vacancy isn't immediately available, we advise you on how to apply directly and strategically."
+  },
+  {
+    question: "How can I create a CV that stands out to hospitals in Dubai?",
+    answer: "Keep your CV clear and concise. Focus on your medical education, qualifications, and clinical experience. Hospitals prioritize accredited education over minor courses, so make sure your qualification section is prominent and easy to read."
+  },
+  {
+    question: "How many years of experience are usually required for Consultant roles?",
+    answer: "Most hospitals prefer 3–5 years of post-CCT experience for Consultant-level positions, including pulmonology and other specialties."
+  },
+  {
+    question: "Is the Dubai healthcare market saturated with doctors?",
+    answer: "No. Dubai is competitive, but not saturated. It's a fast-growing medical hub. To succeed long-term, you must show expertise, confidence, and strong work ethic — and actively network, market yourself, and build your presence."
+  },
+  {
+    question: "How do I succeed as a doctor in Dubai?",
+    answer: "Be proactive. Collaborate closely with your hospital's marketing team, attend medical events, deliver presentations, and network with pharmaceutical companies. Share business cards and make yourself visible. Building strong patient and industry relationships is key to long-term success."
+  },
+  {
+    question: "Do I have to pay taxes in my home country for income earned in Dubai?",
+    answer: "In most cases, no. Dubai does not tax personal income, and many expats do not owe taxes back home. However, this depends on your nationality's tax rules, so it's always wise to double-check with a tax expert."
+  },
+  {
+    question: "Are there retirement benefits for expatriate employees in the UAE?",
+    answer: "The UAE does not offer formal retirement plans for expatriate professionals. However, employees do receive an end-of-service gratuity, and there are many long-term savings and investment options available for foreigners living in the UAE."
+  },
+  {
+    question: "How long do expat doctors usually stay in Dubai?",
+    answer: "Dubai remains highly attractive for international doctors due to its tax benefits, lifestyle, and fast-growing medical sector. Many doctors stay for years — some even build their entire careers here."
+  },
+  {
+    question: "What is the cost of living in Dubai?",
+    answer: "Costs vary widely depending on lifestyle. Housing, schooling, transportation, groceries, and leisure activities all influence your monthly expenses. Dubai offers both budget-friendly and luxury options, so your lifestyle will determine your overall cost."
   },
   {
     question: "How much does an apartment cost in Dubai?",
-    answer: "The average rent in the UAE ranges between 30,000 to 50,000 AED (8,100 to 13,600 USD) per year for a studio apartment. One-and two-bedroom apartments range between 70,000 and 100,000 AED (19,000–27,220 USD)."
+    answer: "Average annual rents: Studio: 30,000–50,000 AED (USD 8,100–13,600), 1–2 bedroom: 70,000–100,000 AED (USD 19,000–27,220). Prices depend on the area, building quality, and proximity to amenities."
   },
   {
-    question: "Cost of Living in Dubai",
-    answer: "Cost of living in Dubai varies widely depending on your lifestyle. Here are some factors to consider."
+    question: "Where should I stay when I first arrive in Dubai?",
+    answer: "Most doctors choose temporary accommodation — a hotel or furnished holiday apartment — while their residency visa is being processed. This gives you time to explore neighborhoods and choose a location based on your lifestyle, budget, or proximity to your workplace or beach."
   },
   {
-    question: "How many years experience as a Consultant do jobs for Consultant Pulmonologist generally require?",
-    answer: "The hospitals prefer 3 – 5 years post CCT usually."
+    question: "Can I bring my pet when relocating to the UAE?",
+    answer: "Yes. You can bring cats, dogs, and other pets to the UAE, but you must follow specific import and vaccination requirements. The process should be prepared in advance to avoid delays."
+  },
+  {
+    question: "Can I sponsor my parents to live with me in the UAE?",
+    answer: "Yes. If you hold a valid UAE residence visa and meet the required income criteria, you can sponsor your parents. There are additional steps and documents involved, which we can guide you through."
+  },
+  {
+    question: "What should I consider when choosing a school for my child in Dubai?",
+    answer: "Dubai offers excellent international schools with a wide range of curricula including British, American, IB, and French systems. With 200+ private schools and growing, you can choose based on curriculum preference, location, fees, and school reputation."
+  },
+  {
+    question: "Is accommodation or housing allowance usually included in medical contracts?",
+    answer: "In Dubai, most hospitals no longer include accommodation or schooling allowances in their packages. Some still do, but it's less common because Dubai naturally attracts long-term expat professionals."
   }
 ];
