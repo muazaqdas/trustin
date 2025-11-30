@@ -10,7 +10,7 @@ import './Home.css';
 
 const Home = () => {
   // State for visual type toggle
-  const [visualType, setVisualType] = useState('animated');
+  const [visualType, setVisualType] = useState('isometric');
 
   // Get translated content
   const { t } = useTranslation();
@@ -93,7 +93,7 @@ const Home = () => {
           </div>
 
           {/* Visual Style Toggle */}
-          <VisualToggle value={visualType} onChange={setVisualType} />
+          {/* <VisualToggle value={visualType} onChange={setVisualType} /> */}
 
           <div className="benefits-grid">
             {benefits.map((benefit, index) => (

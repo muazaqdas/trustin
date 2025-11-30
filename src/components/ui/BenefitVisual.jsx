@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Lottie from 'lottie-react';
 import './BenefitVisual.css';
 
-const BenefitVisual = ({ type = 'animated', benefit }) => {
+const BenefitVisual = ({ type = 'isometric', benefit }) => {
   const [animationData, setAnimationData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
