@@ -8,8 +8,7 @@ import './Header.css';
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
-  // const [showNav, setShowNav] = useState(true);
-  // const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const { t, language, setLanguagePreference } = useTranslation();
 
@@ -22,10 +21,21 @@ const Header = () => {
 
   const currentLanguage = languages.find(lang => lang.code === language);
 
+  // Close menus on route change
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsLangDropdownOpen(false);
   }, [location]);
+
+  // Handle scroll detection
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Handle language selection
   const handleLanguageSelect = (langCode) => {
@@ -166,7 +176,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <nav className={`nav-mobile ${isMobileMenuOpen ? 'open' : ''}`}>
+      <nav className={`nav-mobile ${isMobileMenuOpen ? 'open' : ''} ${isScrolled ? 'scrolled' : ''}`}>
         <ul className="nav-list-mobile">
           {/* Language Selector - Mobile Only */}
           <li className="mobile-language">
