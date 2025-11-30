@@ -3,6 +3,7 @@ import { MdEmail, MdPhone, MdLocationOn, MdAccessTime, MdCheck } from 'react-ico
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import Card from '../components/ui/Card';
+import { contactContent } from '../data/contactContent';
 import './Contact.css';
 
 const Contact = () => {
@@ -20,22 +21,18 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const professions = [
-    'Select your level',
-    'General Practitioner (GP)',
-    'Dentist',
-    'Specialist - Internal Medicine',
-    'Specialist - Pediatrics',
-    'Specialist - Surgery',
-    'Specialist - Cardiology',
-    'Specialist - Radiology',
-    'Specialist - Anesthesiology',
-    'Specialist - Other',
-    'Consultant - Internal Medicine',
-    'Consultant - Surgery',
-    'Consultant - Other Specialty',
-    'Other Medical Professional'
-  ];
+  // Icon mapping for contact info
+  const iconMap = {
+    MdEmail: <MdEmail />,
+    MdPhone: <MdPhone />,
+    MdLocationOn: <MdLocationOn />,
+    MdAccessTime: <MdAccessTime />
+  };
+
+  const contactInfo = contactContent.contactInfo.map(item => ({
+    ...item,
+    icon: iconMap[item.iconName]
+  }));
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,26 +46,26 @@ const Contact = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if (!formData.firstName.trim()) newErrors.firstName = contactContent.form.errors.firstName;
+    if (!formData.lastName.trim()) newErrors.lastName = contactContent.form.errors.lastName;
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = contactContent.form.errors.email.required;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
+      newErrors.email = contactContent.form.errors.email.invalid;
     }
 
     if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
+      newErrors.phone = contactContent.form.errors.phone.required;
     } else if (!/^[\d\s\-\(\)]+$/.test(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number';
+      newErrors.phone = contactContent.form.errors.phone.invalid;
     }
 
-    if (!formData.profession || formData.profession === 'Select your level') {
-      newErrors.profession = 'Please select your medical level';
+    if (!formData.profession || formData.profession === contactContent.form.fields.profession.options[0]) {
+      newErrors.profession = contactContent.form.errors.profession;
     }
 
-    if (!formData.state.trim()) newErrors.state = 'Licensing authority is required';
+    if (!formData.state.trim()) newErrors.state = contactContent.form.errors.state;
 
     return newErrors;
   };
@@ -101,43 +98,15 @@ const Contact = () => {
     }, 1500);
   };
 
-  const contactInfo = [
-    {
-      icon: <MdEmail />,
-      title: 'Email Us',
-      content: 'info@trustinconsultancy.com',
-      link: 'mailto:info@trustinconsultancy.com'
-    },
-    {
-      icon: <MdPhone />,
-      title: 'Call Us',
-      content: '+971 58 8121 004',
-      link: 'tel:+971588121004'
-    },
-    {
-      icon: <MdLocationOn />,
-      title: 'Visit Us',
-      content: 'Ajman Free Zone C1 Building\nOffice - C1 - 1F\nUnited Arab Emirates',
-      link: null
-    },
-    {
-      icon: <MdAccessTime />,
-      title: 'Business Hours',
-      content: 'Sunday - Thursday: 9AM - 6PM GST\nSaturday: 10AM - 2PM GST',
-      link: null
-    }
-  ];
-
   return (
     <div className="contact-page">
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="container">
           <div className="contact-hero-content slide-up">
-            <h1 className="page-title">Start Your UAE Licensing Journey</h1>
+            <h1 className="page-title">{contactContent.hero.title}</h1>
             <p className="page-subtitle">
-              Ready to begin your DHA, MOH or DOH licensing process? Fill out the form below and our consultancy team
-              will contact you within 24 hours with a personalized package recommendation and timeline.
+              {contactContent.hero.subtitle}
             </p>
           </div>
         </div>
@@ -150,75 +119,75 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="contact-form-wrapper slide-in-left">
               <Card variant="default" className="contact-form-card">
-                <h2 className="form-title">Start Your Consultation</h2>
+                <h2 className="form-title">{contactContent.form.title}</h2>
                 <p className="form-description">
-                  Complete the form below for a free consultation, package recommendation, and personalized timeline estimate.
+                  {contactContent.form.description}
                 </p>
 
                 {isSubmitted ? (
                   <div className="success-message">
                     <div className="success-icon"><MdCheck /></div>
-                    <h3 className="success-title">Thank You!</h3>
+                    <h3 className="success-title">{contactContent.form.successMessage.title}</h3>
                     <p className="success-text">
-                      Your consultation request has been received. Our team will contact you within 24 hours
-                      to discuss your DHA/DOH/MOH licensing needs, recommend a package, and provide a timeline estimate.
+                      {contactContent.form.successMessage.text}
                     </p>
                     <Button
                       variant="primary"
                       size="md"
                       onClick={() => setIsSubmitted(false)}
                     >
-                      Submit Another Request
+                      {contactContent.form.successMessage.buttonText}
                     </Button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="contact-form">
                     <div className="form-row">
                       <Input
-                        label="First Name"
+                        label={contactContent.form.fields.firstName.label}
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleChange}
                         error={errors.firstName}
-                        required
-                        placeholder="John"
+                        required={contactContent.form.fields.firstName.required}
+                        placeholder={contactContent.form.fields.firstName.placeholder}
                       />
                       <Input
-                        label="Last Name"
+                        label={contactContent.form.fields.lastName.label}
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleChange}
                         error={errors.lastName}
-                        required
-                        placeholder="Doe"
+                        required={contactContent.form.fields.lastName.required}
+                        placeholder={contactContent.form.fields.lastName.placeholder}
                       />
                     </div>
 
                     <Input
                       type="email"
-                      label="Email Address"
+                      label={contactContent.form.fields.email.label}
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       error={errors.email}
-                      required
-                      placeholder="john.doe@email.com"
+                      required={contactContent.form.fields.email.required}
+                      placeholder={contactContent.form.fields.email.placeholder}
                     />
 
                     <Input
                       type="tel"
-                      label="Phone Number"
+                      label={contactContent.form.fields.phone.label}
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       error={errors.phone}
-                      required
-                      placeholder="(234) 567-890"
+                      required={contactContent.form.fields.phone.required}
+                      placeholder={contactContent.form.fields.phone.placeholder}
                     />
 
                     <div className="input-wrapper">
                       <label htmlFor="profession" className="input-label">
-                        Medical Level & Specialization<span className="input-required">*</span>
+                        {contactContent.form.fields.profession.label}
+                        {contactContent.form.fields.profession.required && <span className="input-required">*</span>}
                       </label>
                       <select
                         id="profession"
@@ -226,9 +195,9 @@ const Contact = () => {
                         value={formData.profession}
                         onChange={handleChange}
                         className={`input ${errors.profession ? 'input-error' : ''}`}
-                        required
+                        required={contactContent.form.fields.profession.required}
                       >
-                        {professions.map((prof, index) => (
+                        {contactContent.form.fields.profession.options.map((prof, index) => (
                           <option key={index} value={prof}>
                             {prof}
                           </option>
@@ -240,18 +209,18 @@ const Contact = () => {
                     </div>
 
                     <Input
-                      label="Target Licensing Authority"
+                      label={contactContent.form.fields.state.label}
                       name="state"
                       value={formData.state}
                       onChange={handleChange}
                       error={errors.state}
-                      required
-                      placeholder="e.g., DHA (Dubai), DOH or MOH (Other Emirates)"
+                      required={contactContent.form.fields.state.required}
+                      placeholder={contactContent.form.fields.state.placeholder}
                     />
 
                     <div className="input-wrapper">
                       <label htmlFor="message" className="input-label">
-                        Additional Information (Optional)
+                        {contactContent.form.fields.message.label}
                       </label>
                       <textarea
                         id="message"
@@ -259,15 +228,14 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         className="input"
-                        placeholder="Tell us about your credentials tier, current location, timeline expectations, or any questions..."
+                        placeholder={contactContent.form.fields.message.placeholder}
                         rows="5"
                       />
                     </div>
 
                     <div className="form-privacy">
                       <p>
-                        By submitting this form, you agree to our privacy policy.
-                        Your information is secure and will never be shared.
+                        {contactContent.form.privacy}
                       </p>
                     </div>
 
@@ -279,7 +247,7 @@ const Contact = () => {
                       disabled={isSubmitting}
                       className={isSubmitting ? 'btn-loading' : ''}
                     >
-                      {isSubmitting ? 'Submitting...' : 'Request Free Consultation'}
+                      {isSubmitting ? contactContent.form.buttons.submitting : contactContent.form.buttons.submit}
                     </Button>
                   </form>
                 )}
@@ -312,14 +280,11 @@ const Contact = () => {
               </div>
 
               <Card variant="gradient" className="contact-guarantee-card">
-                <h3 className="guarantee-title">Our Commitment to You</h3>
+                <h3 className="guarantee-title">{contactContent.guarantee.title}</h3>
                 <ul className="guarantee-list">
-                  <li><MdCheck /> 24-hour response time</li>
-                  <li><MdCheck /> Free initial consultation</li>
-                  <li><MdCheck /> Transparent package pricing</li>
-                  <li><MdCheck /> No hidden fees</li>
-                  <li><MdCheck /> 95% success rate</li>
-                  <li><MdCheck /> Personalized consultant support</li>
+                  {contactContent.guarantee.items.map((item, index) => (
+                    <li key={index}><MdCheck /> {item}</li>
+                  ))}
                 </ul>
               </Card>
             </div>
