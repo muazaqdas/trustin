@@ -53,6 +53,7 @@ const About = () => {
             </div>
             <div className="mission-visual slide-in-right">
               <Card variant="glass" className="mission-stats-card">
+              <div className='mission-stats-card-glass'></div>
                 {aboutContent.mission.stats.map((stat, index) => (
                   <div key={index} className="mission-stat">
                     <h3 className="stat-number">{stat.number}</h3>
