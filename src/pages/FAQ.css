@@ -258,9 +258,9 @@
 }
 
 @media (max-width: 480px) {
-  .faq-page {
+  /* .faq-page {
     padding-top: 60px;
-  }
+  } */
 
   .no-results-icon {
     font-size: 4rem;

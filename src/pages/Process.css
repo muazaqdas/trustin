@@ -472,9 +472,9 @@
 }
 
 @media (max-width: 480px) {
-  .process-page {
+  /* .process-page {
     padding-top: 60px;
-  }
+  } */
 
   .timeline-item {
     grid-template-columns: 40px 1fr;

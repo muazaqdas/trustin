@@ -17,6 +17,7 @@ const Home = () => {
   const heroContent = t.homeContent.heroContent;
   const statsContent = t.homeContent.statsContent;
   const benefitsContent = t.homeContent.benefitsContent;
+  const operationLocationContent = t.homeContent.operationLocationContent;
   const howItWorksContent = t.homeContent.howItWorksContent;
   const testimonialsContent = t.homeContent.testimonialsContent;
   const finalCtaContent = t.homeContent.finalCtaContent;
@@ -63,7 +64,7 @@ const Home = () => {
                 </Button>
               </Link>
             </div>
-            <p className="hero-tagline">{heroContent.tagline}</p>
+            {/* <p className="hero-tagline">{heroContent.tagline}</p> */}
           </div>
         </div>
       </section>
@@ -103,6 +104,39 @@ const Home = () => {
                 <p className="benefit-description">{benefit.description}</p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* MOHAP DHA DOH Section */}
+      <section className="container">
+        <div className='card operation-location-section'>
+          <div className="container">
+            <div className="section-header text-center">
+              <h2 className="section-title">{operationLocationContent.header.title}</h2>
+              <p className="section-subtitle">{operationLocationContent.header.subtitle}</p>
+            </div>
+
+            <div className="operation-location-grid">
+              {operationLocationContent.items.map((authority, index) => (
+                <Card
+                  key={index}
+                  variant="default"
+                  hover
+                  className={`operation-location-card slide-up stagger-${(index % 3) + 1}`}
+                >
+                  <div className="authority-logo-wrapper">
+                    <img
+                      src={authority.logo}
+                      alt={`${authority.title} Logo`}
+                      className="authority-logo"
+                    />
+                  </div>
+                  <h3 className="authority-title">{authority.title}</h3>
+                  <p className="authority-description">{authority.description}</p>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -10,7 +10,6 @@ export const heroContent = {
     primary: "Commencez Votre Parcours Aujourd'hui",
     secondary: "Voir Comment Ça Marche"
   },
-  tagline: "Votre recherche se termine ici."
 };
 
 export const statsContent = [
@@ -67,6 +66,30 @@ export const benefitsContent = {
       description: 'Consultant dédié disponible tout au long de votre processus de licence avec des mises à jour régulières.',
       lottieAnimation: '/animations/benefits/personalized-support.json',
       isometricImage: '/images/benefits/isometric/personalized-support.svg'
+    }
+  ]
+};
+
+export const operationLocationContent = {
+  header: {
+    title: "Notre Couverture aux EAU",
+    subtitle: "Nous assistons les professionnels de la santé avec les licences auprès de toutes les principales autorités sanitaires des EAU"
+  },
+  items: [
+    {
+      title: "MOHAP",
+      description: "Le Ministère de la Santé et de la Prévention supervise l'octroi de licences aux professionnels de la santé aux EAU",
+      logo: "/images/authorities/mohap-placeholder.svg"
+    },
+    {
+      title: "DHA",
+      description: "L'Autorité de la Santé de Dubaï réglemente les pratiques de soins de santé à Dubaï et délivre les licences aux professionnels de la santé",
+      logo: "/images/authorities/dha-placeholder.svg"
+    },
+    {
+      title: "DOH",
+      description: "Le Département de la Santé d'Abou Dabi réglemente les pratiques de soins de santé et l'octroi de licences aux professionnels de la santé à Abou Dabi",
+      logo: "/images/authorities/doh-placeholder.svg"
     }
   ]
 };

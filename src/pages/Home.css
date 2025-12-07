@@ -174,6 +174,153 @@
   margin: 0;
 }
 
+/* ==========================================
+   OPERATION LOCATION SECTION (MOHAP, DHA, DOH)
+   ========================================== */
+
+.operation-location-section {
+  background: var(--gradient-primary);
+  padding: var(--space-20);
+}
+
+.operation-location-section .section-title {
+  color: var(--white);
+}
+
+.operation-location-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.operation-location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-10);
+}
+
+.operation-location-card {
+  padding: var(--space-10);
+  padding-top: 0 !important;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  transition: all var(--transition-base);
+  background-color: var(--white);
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.operation-location-card:hover {
+  transform: translateY(-8px);
+  /* background: transparent !important; */
+}
+
+.authority-logo-wrapper {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #5ac2a6 0%, #6abfd6 100%);
+  padding: 10px;
+  margin: -16px;
+  margin-bottom: 20px;
+}
+
+/* .authority-logo-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  background: var(--white);
+  padding: 10px;
+} */
+
+/* .authority-logo-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+
+  background: var(--white);
+  z-index: 0;
+} */
+
+.authority-logo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.operation-location-card:hover {
+  transform: scale(1.1);
+}
+
+.authority-title {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.authority-description {
+  font-size: var(--text-base);
+  color: var(--black);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 350px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .operation-location-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .operation-location-card {
+    padding: var(--space-8);
+    padding-top: 0px !important;
+  }
+  .operation-location-section{
+    padding: var(--space-12) 0 ;
+  }
+
+  .authority-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .authority-logo-wrapper {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 0px;
+  }
+
+  .authority-title {
+    font-size: var(--text-xl);
+  }
+
+  .authority-description {
+    font-size: var(--text-sm);
+  }
+}
+
 /* How It Works Section */
 .how-it-works-section {
   background: var(--white);
@@ -378,9 +525,9 @@
 }
 
 @media (max-width: 480px) {
-  .home-page {
+  /* .home-page {
     padding-top: 60px;
-  }
+  } */
 
   .hero-title {
     font-size: var(--text-3xl);

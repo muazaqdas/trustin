@@ -3,9 +3,9 @@ export const headerNav = {
   navLinks: [
     { path: '/', label: 'Inicio' },
     { path: '/process', label: 'Proceso' },
-    { path: '/about', label: 'Nosotros' },
+    { path: '/about', label: 'Acerca' },
     { path: '/faq', label: 'Preguntas Frecuentes' },
-    { path: '/contact', label: 'Contáctanos' },
+    { path: '/contact', label: 'Contacto' },
   ],
   languageCode: 'ES',
   ctaButton: 'Comenzar',
@@ -23,7 +23,7 @@ export const footerContent = {
     links: [
       { path: '/', label: 'Inicio' },
       { path: '/process', label: 'Proceso' },
-      { path: '/about', label: 'Nosotros' },
+      { path: '/about', label: 'Acerca' },
       { path: '/faq', label: 'Preguntas Frecuentes' },
       { path: '/contact', label: 'Contacto' },
     ]

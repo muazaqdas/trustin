@@ -10,7 +10,6 @@ export const heroContent = {
     primary: "Start Your Journey Today",
     secondary: "See How It Works"
   },
-  tagline: "Your search ends here."
 };
 
 export const statsContent = [
@@ -67,6 +66,30 @@ export const benefitsContent = {
       description: 'Dedicated consultant available throughout your process of licensing journey with regular updates.',
       lottieAnimation: '/animations/benefits/personalized-support.json',
       isometricImage: '/images/benefits/isometric/personalized-support.svg'
+    }
+  ]
+};
+
+export const operationLocationContent = {
+  header: {
+    title: "Our Coverage Across UAE",
+    subtitle: "We assist healthcare professionals with licensing across all major UAE health authorities"
+  },
+  items: [
+    {
+      title: "MOHAP",
+      description: "The Ministry of Health and Prevention oversees the licensing of healthcare professionals in the UAE",
+      logo: "/images/authorities/MOHAP.webp"
+    },
+    {
+      title: "DHA",
+      description: "The Dubai Health Authority regulates healthcare practices in Dubai and issues licensing of healthcare professionals",
+      logo: "/images/authorities/DHA.jpg"
+    },
+    {
+      title: "DOH",
+      description: "The Department of Health for Abu Dhabi regulates healthcare practices and licensing healthcare professionals in Abu Dhabi",
+      logo: "/images/authorities/DOH.jpeg"
     }
   ]
 };

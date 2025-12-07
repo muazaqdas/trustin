@@ -259,9 +259,9 @@
 }
 
 @media (max-width: 480px) {
-  .contact-page {
+  /* .contact-page {
     padding-top: 60px;
-  }
+  } */
 
   .success-icon {
     width: 60px;

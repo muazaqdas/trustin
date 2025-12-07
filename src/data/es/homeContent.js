@@ -10,7 +10,6 @@ export const heroContent = {
     primary: "Comienza Tu Proceso Hoy",
     secondary: "Ver Cómo Funciona"
   },
-  tagline: "Tu búsqueda termina aquí."
 };
 
 export const statsContent = [
@@ -67,6 +66,30 @@ export const benefitsContent = {
       description: 'Consultor dedicado disponible durante todo tu proceso de licenciamiento con actualizaciones regulares.',
       lottieAnimation: '/animations/benefits/personalized-support.json',
       isometricImage: '/images/benefits/isometric/personalized-support.svg'
+    }
+  ]
+};
+
+export const operationLocationContent = {
+  header: {
+    title: "Nuestra Cobertura en los EAU",
+    subtitle: "Asistimos a profesionales de la salud con licencias en todas las principales autoridades sanitarias de los EAU"
+  },
+  items: [
+    {
+      title: "MOHAP",
+      description: "El Ministerio de Salud y Prevención supervisa la licencia de profesionales de la salud en los EAU",
+      logo: "/images/authorities/mohap-placeholder.svg"
+    },
+    {
+      title: "DHA",
+      description: "La Autoridad de Salud de Dubái regula las prácticas de atención médica en Dubái y emite licencias para profesionales de la salud",
+      logo: "/images/authorities/dha-placeholder.svg"
+    },
+    {
+      title: "DOH",
+      description: "El Departamento de Salud de Abu Dabi regula las prácticas de atención médica y la licencia de profesionales de la salud en Abu Dabi",
+      logo: "/images/authorities/doh-placeholder.svg"
     }
   ]
 };

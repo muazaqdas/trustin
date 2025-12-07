@@ -25,7 +25,6 @@ body {
   color: var(--gray-800);
   background-color: var(--gray-50);
   overflow-x: hidden;
-  padding-top: 120px;
 }
 
 /* Typography */
@@ -86,15 +85,15 @@ a:hover {
 }
 
 /* Main Content - Account for fixed header with contact bar */
-/* .main-content {
+ /* .main-content {
   padding-top: 140px;
-}
+} */
 
 @media (max-width: 768px) {
   .main-content {
-    padding-top: 160px;
+    /* padding-top: 160px; */
   }
-} */
+}
 
 /* Section Spacing */
 .section {
