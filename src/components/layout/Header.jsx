@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MdLanguage } from 'react-icons/md';
+import { RiCloseLargeFill } from "react-icons/ri";
+import { RxHamburgerMenu } from "react-icons/rx";
 import Button from '../ui/Button';
 import { useTranslation } from '../../hooks/useTranslation';
 import './Header.css';
@@ -103,8 +105,11 @@ const Header = () => {
       </div>
 
       {/* Sticky Navigation - Center */}
-      <div className={`header-nav-sticky visible`}>
-        <div className="container">
+      <div
+        className={`header-nav-sticky visible`}
+        style={isMobileMenuOpen ? {backdropFilter: "blur(16px)"} : {}}
+      >
+        <div className="">
           {/* Desktop Navigation */}
           <nav className="nav-desktop">
             <ul className="nav-list">
@@ -127,11 +132,7 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={t.layoutContent.footerContent.ariaLabels.mobileMenu}
           >
-            <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
+            {isMobileMenuOpen? <RiCloseLargeFill size={25}/>:<RxHamburgerMenu size={25} />}
           </button>
         </div>
       </div>
@@ -177,6 +178,21 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <nav className={`nav-mobile ${isMobileMenuOpen ? 'open' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+        <div className='nav-mobile-header'>
+          <div className="header-fixed-logo">
+            <Link to="/" className="logo-link">
+              <img src="/logo.png" alt={t.layoutContent.headerNav.logoAlt} className="logo" />
+            </Link>
+          </div>
+          {/* Mobile Menu Toggle */}
+          <button
+            className="mobile-menu-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={t.layoutContent.footerContent.ariaLabels.mobileMenu}
+          >
+            {isMobileMenuOpen? <RiCloseLargeFill size={25}/>:<RxHamburgerMenu size={25} />}
+          </button>
+        </div>
         <ul className="nav-list-mobile">
           {/* Language Selector - Mobile Only */}
           <li className="mobile-language">
@@ -186,7 +202,7 @@ const Header = () => {
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
                 style={{ cursor: 'pointer', position: 'relative' }}
               >
-                <span className="language-icon"><MdLanguage /></span>
+                {/* <span className="language-icon"><MdLanguage /></span> */}
                 <span className="language-text">{currentLanguage?.flag} {currentLanguage?.label}</span>
 
                 {/* Language Dropdown - Mobile */}
