@@ -10,6 +10,7 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import './styles/global.css';
 import TopHeader from './components/layout/TopHeader';
+import WhatsappButton from './components/ui/WhatsappButton';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
           </Routes>
         </main>
+        <WhatsappButton number='+971588121004'/>
         <Footer />
       </div>
     </Router>
