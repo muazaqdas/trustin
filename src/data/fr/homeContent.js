@@ -79,17 +79,17 @@ export const operationLocationContent = {
     {
       title: "MOHAP",
       description: "Le Ministère de la Santé et de la Prévention supervise l'octroi de licences aux professionnels de la santé aux EAU",
-      logo: "/images/authorities/mohap-placeholder.svg"
+      logo: "/images/authorities/MOHAP.webp"
     },
     {
       title: "DHA",
       description: "L'Autorité de la Santé de Dubaï réglemente les pratiques de soins de santé à Dubaï et délivre les licences aux professionnels de la santé",
-      logo: "/images/authorities/dha-placeholder.svg"
+      logo: "/images/authorities/DHA.webp"
     },
     {
       title: "DOH",
       description: "Le Département de la Santé d'Abou Dabi réglemente les pratiques de soins de santé et l'octroi de licences aux professionnels de la santé à Abou Dabi",
-      logo: "/images/authorities/doh-placeholder.svg"
+      logo: "/images/authorities/DOH.webp"
     }
   ]
 };

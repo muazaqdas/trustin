@@ -79,17 +79,17 @@ export const operationLocationContent = {
     {
       title: "MOHAP",
       description: "El Ministerio de Salud y Prevención supervisa la licencia de profesionales de la salud en los EAU",
-      logo: "/images/authorities/mohap-placeholder.svg"
+      logo: "/images/authorities/MOHAP.webp"
     },
     {
       title: "DHA",
       description: "La Autoridad de Salud de Dubái regula las prácticas de atención médica en Dubái y emite licencias para profesionales de la salud",
-      logo: "/images/authorities/dha-placeholder.svg"
+      logo: "/images/authorities/DHA.webp"
     },
     {
       title: "DOH",
       description: "El Departamento de Salud de Abu Dabi regula las prácticas de atención médica y la licencia de profesionales de la salud en Abu Dabi",
-      logo: "/images/authorities/doh-placeholder.svg"
+      logo: "/images/authorities/DOH.webp"
     }
   ]
 };

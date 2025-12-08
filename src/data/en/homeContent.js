@@ -84,12 +84,12 @@ export const operationLocationContent = {
     {
       title: "DHA",
       description: "The Dubai Health Authority regulates healthcare practices in Dubai and issues licensing of healthcare professionals",
-      logo: "/images/authorities/DHA.jpg"
+      logo: "/images/authorities/DHA.webp"
     },
     {
       title: "DOH",
       description: "The Department of Health for Abu Dhabi regulates healthcare practices and licensing healthcare professionals in Abu Dhabi",
-      logo: "/images/authorities/DOH.jpeg"
+      logo: "/images/authorities/DOH.webp"
     }
   ]
 };

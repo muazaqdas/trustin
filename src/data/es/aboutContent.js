@@ -33,14 +33,14 @@ export const aboutContent = {
         designation: "Fundadora",
         subDesignation: "",
         bio: "Morsal Zamani es una empresaria nacida en los EAU impulsada por la claridad, la honestidad y el deseo de ayudar a los profesionales de la salud a alcanzar sus objetivos profesionales en los EAU. Con una profunda comprensión de la industria de la salud y los procesos de licenciamiento, creó TrustIn para proporcionar apoyo integral y personalizado a médicos, dentistas, especialistas y consultores que buscan ejercer legalmente en todos los Emiratos. Impulsada por un compromiso con la excelencia, Morsal asegura que TrustIn brinde servicios transparentes, confiables y profesionales. Su liderazgo, visión estratégica y enfoque práctico la convierten en una guía de confianza para los profesionales de la salud que navegan por complejas rutas de licenciamiento y carrera.",
-        image: "/images/team/morsal-zamani.jpg"
+        image: "/images/team/morsal-zamani.webp"
       },
       {
         name: "Dr. Ather Sajjad Jafri",
         designation: "Cofundador",
         subDesignation: "(Consultor – Psiquiatría Infantil y del Adolescente)",
         bio: "El Dr. Ather Sajjad Jafri es un subespecialista en psiquiatría infantil y del adolescente formado en Occidente con amplia experiencia en el diagnóstico y tratamiento de condiciones de salud mental en niños y adolescentes. Su experiencia abarca una amplia gama de trastornos psiquiátricos pediátricos, incluyendo ansiedad, depresión, desafíos conductuales y condiciones del desarrollo.\n\nComo cofundador de TrustIn, el Dr. Jafri aporta su formación internacional, conocimiento clínico y pasión por la excelencia en atención médica para apoyar la visión e iniciativas de la organización. Su dedicación a mejorar la atención de salud mental y guiar a los profesionales de la salud lo convierte en una parte integral del equipo de TrustIn.",
-        image: "/images/team/ather-sajjad.png"
+        image: "/images/team/ather-sajjad.webp"
       }
     ]
   },

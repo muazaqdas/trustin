@@ -33,14 +33,14 @@ export const aboutContent = {
         designation: "Founder",
         subDesignation: "",
         bio: "Morsal Zamani is a UAE-born entrepreneur driven by clarity, honesty, and a desire the visionary founder of TrustIn, dedicated to helping healthcare professionals achieve their career goals in the UAE. With a deep understanding of the healthcare industry and licensing processes, she created TrustIn to provide comprehensive, personalized support for doctors, dentists, specialists, and consultants seeking to practice legally across all Emirates. Driven by a commitment to excellence, Morsal ensures that TrustIn delivers transparent, reliable, and professional services. Her leadership, strategic vision, and hands-on approach make her a trusted guide for healthcare professionals navigating complex licensing and career pathways.",
-        image: "/images/team/morsal-zamani.jpg"
+        image: "/images/team/morsal-zamani.webp"
       },
       {
         name: "Dr. Ather Sajjad Jafri",
         designation: "Co-Founder",
         subDesignation: "(Consultant – Child and Adolescent Psychiatry)",
         bio: "Dr. Ather Sajjad Jafri is a Western-trained Child and Adolescent Psychiatry Sub-Specialist with extensive experience in diagnosing and treating mental health conditions in children and adolescents. His expertise spans a wide range of pediatric psychiatric disorders, including anxiety, depression, behavioral challenges, and developmental conditions.\n\nAs co-founder of TrustIn, Dr. Jafri brings his international training, clinical knowledge, and passion for healthcare excellence to support the organization's vision and initiatives. His dedication to improving mental health care and guiding healthcare professionals makes him an integral part of the TrustIn team.",
-        image: "/images/team/ather-sajjad.png"
+        image: "/images/team/ather-sajjad.webp"
       }
     ]
   },

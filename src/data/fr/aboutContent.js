@@ -33,14 +33,14 @@ export const aboutContent = {
         designation: "Fondatrice",
         subDesignation: "",
         bio: "Morsal Zamani est une entrepreneuse née aux EAU, animée par la clarté, l'honnêteté et le désir d'aider les professionnels de la santé à atteindre leurs objectifs de carrière aux EAU. Grâce à sa compréhension approfondie de l'industrie de la santé et des processus de licence, elle a créé TrustIn pour fournir un soutien complet et personnalisé aux médecins, dentistes, spécialistes et consultants cherchant à exercer légalement dans tous les Émirats. Guidée par un engagement envers l'excellence, Morsal veille à ce que TrustIn fournisse des services transparents, fiables et professionnels. Son leadership, sa vision stratégique et son approche pratique font d'elle un guide de confiance pour les professionnels de la santé naviguant dans des parcours de licence et de carrière complexes.",
-        image: "/images/team/morsal-zamani.jpg"
+        image: "/images/team/morsal-zamani.webp"
       },
       {
         name: "Dr. Ather Sajjad Jafri",
         designation: "Cofondateur",
         subDesignation: "(Consultant – Psychiatrie de l'Enfant et de l'Adolescent)",
         bio: "Le Dr. Ather Sajjad Jafri est un sous-spécialiste en psychiatrie de l'enfant et de l'adolescent formé en Occident, avec une vaste expérience dans le diagnostic et le traitement des troubles de santé mentale chez les enfants et les adolescents. Son expertise couvre un large éventail de troubles psychiatriques pédiatriques, notamment l'anxiété, la dépression, les défis comportementaux et les troubles du développement.\n\nEn tant que cofondateur de TrustIn, le Dr. Jafri apporte sa formation internationale, ses connaissances cliniques et sa passion pour l'excellence en matière de soins de santé pour soutenir la vision et les initiatives de l'organisation. Son dévouement à l'amélioration des soins de santé mentale et à l'orientation des professionnels de la santé fait de lui une partie intégrante de l'équipe TrustIn.",
-        image: "/images/team/ather-sajjad.png"
+        image: "/images/team/ather-sajjad.webp"
       }
     ]
   },
