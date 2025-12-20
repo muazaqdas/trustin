@@ -107,10 +107,19 @@ export const contactContent = {
       },
       phone: {
         required: "Le numéro de téléphone est requis",
-        invalid: "Veuillez entrer un numéro de téléphone valide"
+        invalid: "Veuillez entrer un numéro de téléphone valide",
+        tooShort: "Le numéro de téléphone doit contenir au moins 10 chiffres"
       },
       profession: "Veuillez sélectionner votre niveau médical",
-      state: "L'autorité de licence est requise"
+      state: "L'autorité de licence est requise",
+      submission: {
+        network: "Erreur réseau. Veuillez vérifier votre connexion et réessayer.",
+        timeout: "Délai d'attente dépassé. Veuillez réessayer.",
+        serverError: "Erreur du serveur. Veuillez réessayer plus tard ou nous contacter directement au +971 58 8121 004.",
+        serviceError: "Service de messagerie temporairement indisponible. Veuillez réessayer ou nous contacter par téléphone au +971 58 8121 004.",
+        generic: "Échec de l'envoi du message. Veuillez réessayer ou nous contacter directement à info@trustinconsultancy.com",
+        rateLimited: "Trop de demandes. Veuillez patienter un moment et réessayer."
+      }
     }
   },
 

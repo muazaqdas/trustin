@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { MdEmail, MdPhone, MdLocationOn, MdAccessTime, MdCheck } from 'react-icons/md';
+import emailjs from '@emailjs/browser';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import Card from '../components/ui/Card';
 import { useTranslation } from '../hooks/useTranslation';
+import { emailJSConfig, isEmailJSConfigured } from '../config/emailjs';
 import './Contact.css';
 
 const Contact = () => {
@@ -24,6 +26,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState('');
 
   // Icon mapping for contact info
   const iconMap = {
@@ -45,6 +48,10 @@ const Contact = () => {
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
+    // Clear submission error when user makes changes
+    if (submissionError) {
+      setSubmissionError('');
+    }
   };
 
   const validateForm = () => {
@@ -55,7 +62,7 @@ const Contact = () => {
 
     if (!formData.email.trim()) {
       newErrors.email = contactContent.form.errors.email.required;
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = contactContent.form.errors.email.invalid;
     }
 
@@ -74,32 +81,94 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Clear any previous submission errors
+    setSubmissionError('');
+
+    // Validate form fields
     const newErrors = validateForm();
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
+    
+    // Check if EmailJS is configured
+    if (!isEmailJSConfigured()) {
+      setSubmissionError(
+        contactContent.form.errors.submission?.serviceError ||
+        'Email service is not configured. Please contact us directly.'
+      );
+      return;
+    }
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
+    try {
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_firstName: formData.firstName,
+        from_lastName: formData.lastName,
+        from_email: formData.email,
+        from_phone: formData.phone,
+        from_profession: formData.profession,
+        from_state: formData.state,
+        message: formData.message || 'No message provided',
+        // Additional helpful info
+        to_name: 'TrustIn Team',
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        emailJSConfig.serviceID,
+        emailJSConfig.templateID,
+        templateParams,
+        emailJSConfig.publicKey
+      );
+
+      if (response.status === 200) {
+        // Success
+        setIsSubmitted(true);
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          profession: '',
+          state: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Unexpected response status');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+
+      // Handle different types of errors
+      let errorMessage = contactContent.form.errors.submission?.generic ||
+        'Failed to send message. Please try again or contact us directly.';
+
+      if (error.text) {
+        // EmailJS specific errors
+        if (error.text.includes('rate limit')) {
+          errorMessage = contactContent.form.errors.submission?.rateLimited || errorMessage;
+        } else if (error.text.includes('Invalid')) {
+          errorMessage = contactContent.form.errors.submission?.serviceError || errorMessage;
+        }
+      } else if (error.message) {
+        // Network or other errors
+        if (error.message.includes('network') || error.message.includes('Failed to fetch')) {
+          errorMessage = contactContent.form.errors.submission?.network || errorMessage;
+        } else if (error.message.includes('timeout')) {
+          errorMessage = contactContent.form.errors.submission?.timeout || errorMessage;
+        }
+      }
+
+      setSubmissionError(errorMessage);
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        profession: '',
-        state: '',
-        message: ''
-      });
-    }, 1500);
+    }
   };
 
   return (
@@ -123,10 +192,15 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="contact-form-wrapper slide-in-left">
               <Card variant="default" className="contact-form-card">
-                <h2 className="form-title">{contactContent.form.title}</h2>
-                <p className="form-description">
-                  {contactContent.form.description}
-                </p>
+              {
+                !isSubmitted && 
+                <>
+                  <h2 className="form-title">{contactContent.form.title}</h2>
+                  <p className="form-description">
+                    {contactContent.form.description}
+                  </p>
+                </>
+              }
 
                 {isSubmitted ? (
                   <div className="success-message">
@@ -242,6 +316,12 @@ const Contact = () => {
                         {contactContent.form.privacy}
                       </p>
                     </div>
+
+                    {submissionError && (
+                      <div className="submission-error-message">
+                        {submissionError}
+                      </div>
+                    )}
 
                     <Button
                       type="submit"
