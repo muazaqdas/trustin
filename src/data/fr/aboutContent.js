@@ -15,7 +15,7 @@ export const aboutContent = {
       "Nous aidons les médecins du monde entier à obtenir leurs licences DHA, DOH et MOH et à bâtir des carrières médicales réussies aux EAU. Nous combinons une expertise approfondie en vérification DataFlow, examen Prometric, exigences d'apostille et processus de conseil éprouvés pour fournir des résultats qui répondent à vos délais et attentes."
     ],
     stats: [
-      { number: "500+", label: "Médecins Licenciés" },
+      // { number: "500+", label: "Médecins Licenciés" },
       { number: "100%", label: "Taux de Réussite" },
       { number: "Tous les Émirats", label: "Couverture DHA, DOH et MOH" }
     ]
@@ -39,7 +39,7 @@ export const aboutContent = {
         name: "Dr. Ather Sajjad Jafri",
         designation: "Cofondateur",
         subDesignation: "(Consultant – Psychiatrie de l'Enfant et de l'Adolescent)",
-        bio: "Le Dr. Ather Sajjad Jafri est un sous-spécialiste en psychiatrie de l'enfant et de l'adolescent formé en Occident, avec une vaste expérience dans le diagnostic et le traitement des troubles de santé mentale chez les enfants et les adolescents. Son expertise couvre un large éventail de troubles psychiatriques pédiatriques, notamment l'anxiété, la dépression, les défis comportementaux et les troubles du développement.\n\nEn tant que cofondateur de TrustIn, le Dr. Jafri apporte sa formation internationale, ses connaissances cliniques et sa passion pour l'excellence en matière de soins de santé pour soutenir la vision et les initiatives de l'organisation. Son dévouement à l'amélioration des soins de santé mentale et à l'orientation des professionnels de la santé fait de lui une partie intégrante de l'équipe TrustIn.",
+        bio: "Le Dr. Ather Sajjad Jafri est un sous-spécialiste en psychiatrie de l'enfant et de l'adolescent formé en Occident, avec une vaste expérience dans le diagnostic et le traitement des troubles de santé mentale chez les enfants et les adolescents. Son expertise couvre un large éventail de troubles psychiatriques pédiatriques, notamment l'anxiété, la dépression, les défis comportementaux et les troubles du développement.\nEn tant que cofondateur de TrustIn, le Dr. Jafri apporte sa formation internationale, ses connaissances cliniques et sa passion pour l'excellence en matière de soins de santé pour soutenir la vision et les initiatives de l'organisation. Son dévouement à l'amélioration des soins de santé mentale et à l'orientation des professionnels de la santé fait de lui une partie intégrante de l'équipe TrustIn.",
         image: "/images/team/ather-sajjad.webp"
       }
     ]

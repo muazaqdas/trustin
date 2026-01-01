@@ -15,7 +15,7 @@ export const aboutContent = {
       "We help doctors from around the world obtain their DHA, DOH and MOH licenses and build successful medical careers in the UAE. We combine expert knowledge of DataFlow verification, Prometric examination, attestation requirements, and proven consultancy processes to deliver results that meet your timeline and expectations."
     ],
     stats: [
-      { number: "500+", label: "Doctors Licensed" },
+      // { number: "500+", label: "Doctors Licensed" },
       { number: "100%", label: "Success Rate" },
       { number: "All Emirates", label: "DHA, DOH & MOH Coverage" }
     ]
@@ -39,7 +39,7 @@ export const aboutContent = {
         name: "Dr. Ather Sajjad Jafri",
         designation: "Co-Founder",
         subDesignation: "(Consultant – Child and Adolescent Psychiatry)",
-        bio: "Dr. Ather Sajjad Jafri is a Western-trained Child and Adolescent Psychiatry Sub-Specialist with extensive experience in diagnosing and treating mental health conditions in children and adolescents. His expertise spans a wide range of pediatric psychiatric disorders, including anxiety, depression, behavioral challenges, and developmental conditions.\n\nAs co-founder of TrustIn, Dr. Jafri brings his international training, clinical knowledge, and passion for healthcare excellence to support the organization's vision and initiatives. His dedication to improving mental health care and guiding healthcare professionals makes him an integral part of the TrustIn team.",
+        bio: "Dr. Ather Sajjad Jafri is a Western-trained Child and Adolescent Psychiatry Sub-Specialist with extensive experience in diagnosing and treating mental health conditions in children and adolescents. His expertise spans a wide range of pediatric psychiatric disorders, including anxiety, depression, behavioral challenges, and developmental conditions.\nAs co-founder of TrustIn, Dr. Jafri brings his international training, clinical knowledge, and passion for healthcare excellence to support the organization's vision and initiatives. His dedication to improving mental health care and guiding healthcare professionals makes him an integral part of the TrustIn team.",
         image: "/images/team/ather-sajjad.webp"
       }
     ]

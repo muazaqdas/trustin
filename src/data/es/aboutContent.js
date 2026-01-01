@@ -15,7 +15,7 @@ export const aboutContent = {
       "Ayudamos a médicos de todo el mundo a obtener sus licencias DHA, DOH y MOH y a construir carreras médicas exitosas en los EAU. Combinamos conocimiento experto en verificación DataFlow, examen Prometric, requisitos de apostilla y procesos de consultoría comprobados para entregar resultados que cumplen con tu cronograma y expectativas."
     ],
     stats: [
-      { number: "500+", label: "Médicos Licenciados" },
+      // { number: "500+", label: "Médicos Licenciados" },
       { number: "100%", label: "Tasa de Éxito" },
       { number: "Todos los Emiratos", label: "Cobertura DHA, DOH y MOH" }
     ]
@@ -39,7 +39,7 @@ export const aboutContent = {
         name: "Dr. Ather Sajjad Jafri",
         designation: "Cofundador",
         subDesignation: "(Consultor – Psiquiatría Infantil y del Adolescente)",
-        bio: "El Dr. Ather Sajjad Jafri es un subespecialista en psiquiatría infantil y del adolescente formado en Occidente con amplia experiencia en el diagnóstico y tratamiento de condiciones de salud mental en niños y adolescentes. Su experiencia abarca una amplia gama de trastornos psiquiátricos pediátricos, incluyendo ansiedad, depresión, desafíos conductuales y condiciones del desarrollo.\n\nComo cofundador de TrustIn, el Dr. Jafri aporta su formación internacional, conocimiento clínico y pasión por la excelencia en atención médica para apoyar la visión e iniciativas de la organización. Su dedicación a mejorar la atención de salud mental y guiar a los profesionales de la salud lo convierte en una parte integral del equipo de TrustIn.",
+        bio: "El Dr. Ather Sajjad Jafri es un subespecialista en psiquiatría infantil y del adolescente formado en Occidente con amplia experiencia en el diagnóstico y tratamiento de condiciones de salud mental en niños y adolescentes. Su experiencia abarca una amplia gama de trastornos psiquiátricos pediátricos, incluyendo ansiedad, depresión, desafíos conductuales y condiciones del desarrollo.\nComo cofundador de TrustIn, el Dr. Jafri aporta su formación internacional, conocimiento clínico y pasión por la excelencia en atención médica para apoyar la visión e iniciativas de la organización. Su dedicación a mejorar la atención de salud mental y guiar a los profesionales de la salud lo convierte en una parte integral del equipo de TrustIn.",
         image: "/images/team/ather-sajjad.webp"
       }
     ]

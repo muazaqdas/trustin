@@ -13,7 +13,7 @@ export const heroContent = {
 };
 
 export const statsContent = [
-  { number: '500+', label: 'Médecins Licenciés' },
+  // { number: '500+', label: 'Médecins Licenciés' },
   { number: '100%', label: 'Taux de Réussite' },
   { number: '3-6+ Mois', label: 'Délai Moyen' },
   { number: 'Tous les Émirats', label: 'Couverture DHA, DOH et MOH' }
