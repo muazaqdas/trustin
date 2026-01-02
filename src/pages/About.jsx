@@ -99,10 +99,10 @@ const About = () => {
                   )}
                   {member.bio && (
                     <p className="team-bio">
-                      {member.bio.split('\n\n').map((paragraph, idx) => (
+                      {member.bio.split('\n').map((paragraph, idx) => (
                         <span key={idx}>
                           {paragraph}
-                          {idx < member.bio.split('\n\n').length - 1 && <><br /><br /></>}
+                          {idx < member.bio.split('\n').length - 1 && <><br /><br /></>}
                         </span>
                       ))}
                     </p>

@@ -494,6 +494,7 @@
 
   .team-bio {
     font-size: var(--text-sm);
+    text-align: center;
   }
 
   .values-grid {
