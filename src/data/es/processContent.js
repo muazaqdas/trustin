@@ -49,7 +49,6 @@ export const processContent = {
     packages: [
       {
         title: "Paquete Médico General/Dentista",
-        price: "$2,100",
         description: "Perfecto para médicos generales y dentistas que buscan licenciamiento DHA, MOH o DOH en los EAU",
         features: [
           "Asistencia y orientación para examen Prometric",
@@ -63,7 +62,6 @@ export const processContent = {
       },
       {
         title: "Paquete Especialista/Fellowship",
-        price: "$2,700",
         description: "Diseñado para médicos especialistas y titulares de Fellowship que buscan licenciamiento médico en EAU",
         features: [
           "Asistencia y orientación para examen Prometric",
@@ -79,7 +77,6 @@ export const processContent = {
       },
       {
         title: "Paquete Consultor",
-        price: "$3,000",
         description: "Apoyo premium para médicos de nivel consultor que navegan por los requisitos de licenciamiento de EAU",
         features: [
           "Asistencia y orientación para examen Prometric",
@@ -95,7 +92,7 @@ export const processContent = {
 
     whatsIncluded: {
       title: "Qué Incluyen Todos los Paquetes",
-      subtitle: "Incluido en el Paquete de $2,700",
+      subtitle: "Incluido en Todos los Paquetes",
       includedItems: [
         {
           number: 1,

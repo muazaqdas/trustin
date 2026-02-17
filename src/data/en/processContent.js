@@ -49,7 +49,6 @@ export const processContent = {
     packages: [
       {
         title: "GP/Dentist Package",
-        price: "$2,100",
         description: "Perfect for General Practitioners and Dentists seeking DHA, MOH or DOH licensing in the UAE",
         features: [
           "Prometric exam assistance and guidance",
@@ -63,7 +62,6 @@ export const processContent = {
       },
       {
         title: "Specialist/Fellowship Package",
-        price: "$2,700",
         description: "Designed for Specialist doctors and Fellowship holders pursuing UAE healthcare licensing",
         features: [
           "Prometric exam assistance and guidance",
@@ -79,7 +77,6 @@ export const processContent = {
       },
       {
         title: "Consultant Package",
-        price: "$3,000",
         description: "Premium support for Consultant-level doctors navigating UAE licensing requirements",
         features: [
           "Prometric exam assistance and guidance",
@@ -95,7 +92,7 @@ export const processContent = {
 
     whatsIncluded: {
       title: "What's Included in All Packages",
-      subtitle: "Included in the $2,700 Package",
+      subtitle: "Included in All Packages",
       includedItems: [
         {
           number: 1,

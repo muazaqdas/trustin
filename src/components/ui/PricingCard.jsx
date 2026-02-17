@@ -11,11 +11,13 @@ const PricingCard = ({ title, price, description, features, popular, category })
 
       <div className="pricing-header">
         <h3 className="pricing-title">{title}</h3>
-        <div className="pricing-price">
-          <span className="price-currency">$</span>
-          <span className="price-amount">{price.replace('$', '')}</span>
-          <span className="price-period">USD</span>
-        </div>
+        {price && (
+          <div className="pricing-price">
+            <span className="price-currency">$</span>
+            <span className="price-amount">{price.replace('$', '')}</span>
+            <span className="price-period">USD</span>
+          </div>
+        )}
         <p className="pricing-description">{description}</p>
       </div>
 

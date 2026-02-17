@@ -49,7 +49,6 @@ export const processContent = {
     packages: [
       {
         title: "Forfait Médecin Généraliste/Dentiste",
-        price: "$2,100",
         description: "Parfait pour les médecins généralistes et dentistes recherchant une licence DHA, MOH ou DOH aux EAU",
         features: [
           "Assistance et conseils pour l'examen Prometric",
@@ -63,7 +62,6 @@ export const processContent = {
       },
       {
         title: "Forfait Spécialiste/Fellowship",
-        price: "$2,700",
         description: "Conçu pour les médecins spécialistes et titulaires de Fellowship poursuivant une licence médicale aux EAU",
         features: [
           "Assistance et conseils pour l'examen Prometric",
@@ -79,7 +77,6 @@ export const processContent = {
       },
       {
         title: "Forfait Consultant",
-        price: "$3,000",
         description: "Soutien premium pour les médecins de niveau consultant naviguant dans les exigences de licence des EAU",
         features: [
           "Assistance et conseils pour l'examen Prometric",
@@ -95,7 +92,7 @@ export const processContent = {
 
     whatsIncluded: {
       title: "Ce Qui Est Inclus dans Tous les Forfaits",
-      subtitle: "Inclus dans le Forfait de $2,700",
+      subtitle: "Inclus dans Tous les Forfaits",
       includedItems: [
         {
           number: 1,
